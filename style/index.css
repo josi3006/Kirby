@@ -1,0 +1,152 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', 'Arial', serif;
+    color: #006989;
+}
+
+
+
+    
+.bgpic1, .bgpic2, .bgpic3 {
+    position: relative;
+    /* opacity: 0.65; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.bgpic1::before {
+    content: "";
+    background-image: url('../images/poolsplash.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .65;
+}
+  
+.bgpic2 {
+      background-image: url('../images/trail.jpg');
+      min-height: 100%;
+}
+  
+.bgpic3 {
+      background-image: url('../images/clayhit.jpg');
+      min-height: 100%;
+}
+
+
+/* start */
+
+
+
+
+#introblock {
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #111;
+}
+
+
+.title span.border {
+    /* This is box color (faded) */
+  background-color: #111;
+  /* This is font color (faded) */
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+
+.slidebox {
+  background-color: transparent;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.card {
+  background-color: transparent;
+  margin: 20px;
+}
+
+.contactimg {
+  width: 80px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+
+@media only screen and (max-device-width: 1024px) {
+  .bgpic1, .bgpic2, .bgpic3 {
+    background-attachment: scroll;
+  }
+}
+
+
+
+
+/* end */
+
+.blu {
+        background-color: blue;
+    }
+
+
+#logobanner {
+    position: relative;
+    min-height: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#mainicon {
+    /* position: relative; */
+    max-width: 300px;
+}
+
+#serviceboxes {
+    background-color: #000000;
+}
+
+.servicebox {
+    border-style: solid;
+    border-color: #006989;
+    border-radius: 10px;
+    background-color: #cbeef3;
+
+}

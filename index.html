@@ -38,7 +38,7 @@
   </div> -->
 
 
-  <!-- SERVICES SECTION -->
+    <!-- SERVICES SECTION -->
 
     <div class="bgpic2">
 
@@ -159,65 +159,33 @@
 
       <div class="row">
 
-<div class="col-sm-6 bluebox">
+        <div class="col-sm bluebox">
+
+          <!-- BEGIN CONTACT FORM -->
 
 
+          <form name="gform" id="gform" enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSeADWCDiBU8NM0EeTqt9jboNUoMQ2_01FdDbw1bxvTcdDs7ng/formResponse?"
+            target="hidden_iframe" onsubmit="submitted=true;">
+            Name:<br>
+            <input type="text" name="entry.1896357567" id="entry.1896357567"><br>
+            Email:<br>
+            <input type="email" name="entry.1937586935" id="entry.1937586935" required><br>
+            Message:<br>
+            <input type="text" name="entry.94069862" id="entry.94069862"><br>
 
-  <!-- BEGIN CONTACT FORM -->
+            <input type="submit" value="Submit">
 
+          </form>
 
-  <form id="fcf-form-id" class="fcf-form-class" method="post" action="form-processor.php">
-        
-    <h1> Contact Us!</h1>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-    
-    <div class="fcf-form-group">
-        <label for="Name" class="fcf-label">Your name</label>
-        <div class="fcf-input-group">
-            <input type="text" id="Name" name="Name" class="fcf-form-control" required>
         </div>
-    </div>
 
-    <div class="fcf-form-group">
-        <label for="Email" class="fcf-label">Your email address</label>
-        <div class="fcf-input-group">
-            <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+
+        <div class="col-sm pinkbox">
+          you're
         </div>
-    </div>
-
-    <div class="fcf-form-group">
-        <label for="Message" class="fcf-label">Your message</label>
-        <div class="fcf-input-group">
-            <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-        </div>
-    </div>
-
-    <div class="fcf-form-group">
-        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
-    </div>
-
-    <div class="fcf-credit" id="fcf-credit">
-    Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>
-    </div>
-
-</form>
-
-</div>
-
-
-<div class="col-sm-3">
-you're
-</div>
-
-
-<div class="col-sm-3">
-  awesome
-</div>
-
-
-
-
-
 
       </div>
     </div>
@@ -232,7 +200,7 @@ you're
 </div> -->
 
 
-<!-- 
+    <!-- 
     <div class="bgpic1">
       <div class="title">
         <span class="border">THANKS!</span>
@@ -242,6 +210,23 @@ you're
 
 
   </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript">var submitted = false;</script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function (e) {
+
+      e.target.reset();
+
+    });
+  </script>
+
+
+
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>

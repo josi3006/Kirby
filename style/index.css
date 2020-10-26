@@ -140,9 +140,7 @@ h3 {
 }
 
 .card {
-  /* background-color: transparent; */
   margin: 20px;
-
   background-color: rgba(255, 255, 255, 0.9);
   color: #006989;
   min-width: 200px;
@@ -153,6 +151,24 @@ h3 {
   border-radius: 16px;
   border-color: #006989;
   border-style: solid;
+}
+
+form {
+    color: #cbeef3;
+}
+
+label {
+    font-size: 100%;
+}
+
+.form-control {
+  background-color: #cbeef3;
+  font-size: 80%;
+  width: 60%;
+}
+
+.form-control-msg {
+    height: 64px;
 }
 
 .contactimg {

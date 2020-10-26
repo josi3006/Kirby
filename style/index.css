@@ -89,6 +89,7 @@ body, html {
     color: #cbeef3;
     background-color: #006989;
     text-align: center;
+    letter-spacing: 2px;
     padding: 30px 60px;
     font-size: 150%;
     /* text-align: justify; */

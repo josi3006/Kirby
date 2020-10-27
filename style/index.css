@@ -8,13 +8,17 @@ body, html {
 
 .box {
     height: 100vh;
-    /* background-color: #ffffe0; */
     background-color: rgba(0, 105, 137, 0.1);
     justify-content: center; 
     display: flex;
     align-items: center;
-
     width: 100%;
+    /* margin: 0 auto; */
+}
+
+.red {
+  background-color: #f50707;
+  min-height: 20px;
 }
 
 
@@ -30,7 +34,12 @@ body, html {
 
 .row {
     width: 100%;
+
+
 }
+
+
+
 
 .bluebox {
     background-color: rgba(0, 105, 137, 0.9);

@@ -19,9 +19,9 @@
 
   <div class="container-fluid px-0">
 
-    <div class="row">
+    <div class="row mx-0">
 
-      <div class="col">
+      <div class="col px-0">
 
         <div class="box">
 
@@ -33,17 +33,23 @@
 
     </div>
 
-    <div id='introblock'>
-      <h3>A POOL COMPANY LIKE NO OTHER</h3><br>
-      <p>Kirby Aquatics does FOUR THINGS to make swimmers safer:</p>
-    </div>
 
+
+
+
+
+
+        <div id='introblock'>
+          <h3>A POOL COMPANY LIKE NO OTHER</h3><br>
+          <p>Kirby Aquatics does FOUR THINGS to make swimmers safer:</p>
+        </div>
+
+     
 
     <!-- SERVICES SECTION -->
 
-    <!-- <div class="bgpic2"> -->
 
-    <div class="row bgpic2 pt-5 pb-5">
+    <div class="row bgpic2 pt-5 pb-5 mx-0">
 
       <div class="card-deck">
 
@@ -57,7 +63,7 @@
                 certification requirements in the nation. Lifeguarding is serious, so we take it seriously. What's more,
                 we offer discounted certification and scholarships for candidates who couldn't otherwise afford classes.
               </p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="training.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
         </div>
@@ -113,33 +119,16 @@
     </div>
 
 
-    <div class="row">
+    <div class="row mx-0">
 
       <div class="col-sm bluebox pl-5 pb-5">
 
 
 
-
-
-        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfP0zBPlNDI9Td2pFWWswsnZemxxXrvnPbI9PoEDMgabTZO3Q/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-          First name:<br>
-          <input type="text" name="entry.43774561" id="entry.43774561"><br>
-          Last name:<br>
-          <input type="text" name="entry.1660289428" id="entry.1660289428">
-          <input type="submit" value="Submit">
-        </form>
-        
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
         <!-- BEGIN CONTACT FORM -->
 
 
-
-
-
-
-
-        <!-- <form name="gform" id="gform" enctype="text/plain"
+        <form name="gform" id="gform" enctype="text/plain"
           action="https://docs.google.com/forms/d/e/1FAIpQLSfP0zBPlNDI9Td2pFWWswsnZemxxXrvnPbI9PoEDMgabTZO3Q/formResponse?"
           target="./landing.html" onsubmit="submitted=true;">
 
@@ -165,7 +154,7 @@
 
         </form>
 
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe> -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
       </div>
 
@@ -186,25 +175,6 @@
 
 
 
-  <!-- 
-<div style="position:relative;">
-    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-        <p>Row of contact info here</p>
-    </div>
-</div> -->
-
-
-  <!-- 
-    <div class="bgpic1">
-      <div class="title">
-        <span class="border">THANKS!</span>
-      </div>
-    </div> -->
-
-
-
-
-
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
@@ -213,6 +183,8 @@
   <script type="text/javascript">
     $('#gform').on('submit', function (e) {
 
+
+      console.log('Sent??');
       e.target.reset();
 
     });

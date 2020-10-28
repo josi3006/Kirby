@@ -136,11 +136,20 @@ body, html {
   width: 20%;
 }
 
-ul {
+li.link {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
   font-size: 120%;
+}
+
+li.question {
+  font-size: 100%;
+}
+
+li.answer {
+  font-size: 80%;
+  list-style-type: none;
 }
 
 

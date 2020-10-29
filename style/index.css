@@ -204,6 +204,24 @@ h3 {
   border-style: solid;
 }
 
+
+.innercard {
+  margin: 20px;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color:  #006989;;
+
+  color: #cbeef3;
+  /* min-width: 200px; */
+  min-height: 500px;
+  /* width: 100%; */
+  padding: 20px;
+  text-align: center;
+  border-radius: 16px;
+  border-color: #cbeef3;
+  border-style: solid;
+}
+
+
 form {
     color: #cbeef3;
 }

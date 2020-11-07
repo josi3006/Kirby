@@ -49,6 +49,7 @@
 
         </div>
 
+
         <!-- SERVICES SECTION -->
 
 
@@ -61,15 +62,11 @@
                     <div class="card-body">
                         <h4 class="card-title">REAL-TIME POOl SERVICE ESTIMATE</h4>
 
-                        <p class="card-text"><br>
+                        <p class="card-text" id='estimate-component-goes-here'></p><br>
 
-                            <p>here:</p>
-                        <div id="estimate-component-goes-here"></div>
 
-                        
-
-                        
                     </div>
+
                 </div>
 
             </div>
@@ -159,6 +156,7 @@
 
 
 
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
@@ -173,11 +171,81 @@
         });
     </script>
 
-<script type="text/javascript" src="estimate.js"></script>
+
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+
+    <script type="text/babel">
+
+        const { useState, setState } = React;
+
+
+        function Estimator() {
+
+            const [total, setTotal] = useState(0);
+            const [activeState, setActiveState] = useState(null);
+
+
+
+            return (
+
+                <div>
+                    <div>
+                        <p>The total is {total}</p>
+                        <button onClick={() => setTotal(total + 1)}>Add 1</button>
+                        <button onClick={() => setTotal(total + 10)}>Add 10</button>
+                        <button onClick={() => setTotal(total - 1)}>Subtract 1</button>
+                        <button onClick={() => setTotal(total - 5)}>Subtract 5</button>
+                        <button onClick={() => setTotal(0)}>RESET</button>
+                    </div>
+
+
+
+
+
+<fieldset>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onChange={() => $("fieldset").attr('disabled')} />
+                        <label class="form-check-label" for="exampleRadios1">
+                            Radio 1</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                        <label class="form-check-label" for="exampleRadios2">
+                            Radio 2</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" />
+                        <label class="form-check-label" for="exampleRadios3">
+                            Radio 3</label>
+                    </div>
+</fieldset>
+
+                </div>
+
+
+            );
+        };
+
+        ReactDOM.render(
+            <Estimator />,
+            document.getElementById('estimate-component-goes-here')
+        );
+
+
+
+    </script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
+
+
 
 </body>
 

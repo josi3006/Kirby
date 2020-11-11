@@ -36,18 +36,76 @@ $("select, input").bind('click', function () {
 
 
 
+// $("#acknowledgementCheckbox").bind('submit', function () {
 
 
-$(document).ready(function() {
-    $("button").click(function(){
+//     console.log('binding worked');
+//     if ($("#acknowledgementCheckbox").prop('checked') == false) {
+//         $("#noAcknowledgement").setAttribute('display', 'block');
+//     } else {
+//         return;
+//     }
+// });
 
-        var feeArray = [];
 
-        $.each($("input:checked"), function(){
-            feeArray.push($(this).val());
-        });
 
-        console.log('Array is: ' + feeArray);
+$(document).ready(function () {
+    $("button").click(function () {
+
+        window.scrollTo(0, 0);
+
+        if ($('#acknowledgementCheckbox').prop('checked') == false) {
+
+            $("#noAcknowledgement").addClass('new');
+
+        } else if ($('#acknowledgementCheckbox').prop('checked') == true) {
+
+            $("#noAcknowledgement").classList.remove('new');
+        
+
+
+        } else if (
+
+            $('.zipOther').prop('selected') == true) {
+
+            $("#zipMessage").addClass('new');
+
+        } else {
+
+            console.log('I made it through!');
+
+        }
+
+
     });
+
 });
+
+
+
+
+
+
+
+// $(document).ready(function () {
+//     $("button").click(function () {
+
+//         window.scrollTo(0, 0);
+
+//         if ($("#acknowledgementCheckbox").prop('checked') == false) {
+//             $("#noAcknowledgement").setAttribute('display', 'block');
+//             return;
+//         } else {
+//             console.log('All good here!');
+//         }
+
+//         var feeArray = [];
+
+//         $.each($("input:checked"), function () {
+//             feeArray.push($(this).val());
+//         });
+
+//         console.log('Array is: ' + feeArray);
+//     });
+// });
 

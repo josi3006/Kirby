@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/index.css">
 
     <title>Kirby Aquatics</title>
@@ -64,292 +64,299 @@
                     <div class="card-body">
                         <h4 class="card-title">REAL-TIME POOl SERVICE ESTIMATE</h4>
 
+                        <div id="zipMessage" class="hiddenmessages">
+                            The estimate provided is based on our normal service area, indicated by the zip codes listed.  Because you lie outside our normal servce area, your fees may vary based on your location.
+                        </div>
+
+                        <button type="submit">Go!</button>
 
                         <!-- Required checkbox to acknowledge estimate is not binding -->
 
-                        <fieldset id="acknowledgementCheckboxSet" class="mb-4">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="acknowledgementCheckbox"
-                                    value="80">
-                                <label class="form-check-label" for="acknowledgementCheckbox">
-                                    By checking this box, I acknowledge that the information provided here is only an
-                                    estimate, and that actual fees may vary depending on real-world factors.
-                                </label>
-                            </div>
-                        </fieldset>
+                            <fieldset id="acknowledgementCheckboxSet" class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acknowledgementCheckbox"
+                                        value="80" required>
+                                    <label class="form-check-label" for="acknowledgementCheckbox">
+                                        By checking this box, I acknowledge that the information provided here is only
+                                        an
+                                        estimate, and that actual fees may vary depending on real-world factors.
+                                    </label>
+                                    <div id="noAcknowledgement" class="hiddenmessages">You must check here to proceed.</div>
+                                </div>
+                            </fieldset>
 
-                        <hr>
-                        <!-- ZIP code dropdown -->
+                            <hr>
+                            <!-- ZIP code dropdown -->
 
-
-
-
-
-                        <fieldset id="zipCodeSet" class="my-4" name="fieldsetzip" value="setty">
-                            <p>Please select your ZIP code:</p>
-                            <select class="custom-select" id="selecty">
-                                <option value="otherzip"> other / not listed </option>
-                                <option value="0"> 23060 </option>
-                                <option value="0"> 23113 </option>
-                                <option value="0"> 23114 </option>
-                                <option value="0"> 23220 </option>
-                                <option value="0"> 23221 </option>
-                                <option value="0"> 23222 </option>
-                                <option value="0"> 23223 </option>
-                                <option value="0"> 23224 </option>
-                                <option value="0"> 23225 </option>
-                                <option value="0"> 23226 </option>
-                                <option value="0"> 23227 </option>
-                                <option value="0"> 23228 </option>
-                                <option value="0"> 23229 </option>
-                                <option value="0"> 23230 </option>
-                                <option value="0"> 23233 </option>
-                                <option value="0"> 23234 </option>
-                                <option value="0"> 23235 </option>
-                                <option value="0"> 23236 </option>
-                                <option value="0"> 23238 </option>
-                                <option value="0"> 23294 </option>
-                                <option value="otherzip"> other / not listed </option>
-                            </select>
-                        </fieldset>
-
-                        <hr>
-                        <!-- Radios for pool size -->
-
-                        <fieldset id="poolSizeSet" class="my-4">
-
-                            <p>Please choose the size of your pool(s):</p>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="under10k"
-                                    value="0">
-                                <label class="form-check-label" for="under10k">
-                                    10,000 gallons or less</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="10to20k"
-                                    value="0">
-                                <label class="form-check-label" for="10to20k">
-                                    Over 10,000 to 20,000 gallons</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="20kto30k"
-                                    value="15">
-                                <label class="form-check-label" for="20kto30k">
-                                    Over 20,000 to 30,000 gallons</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="30kto40k"
-                                    value="25">
-                                <label class="form-check-label" for="30kto40k">
-                                    Over 30,000 to 40,000 gallons</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="over40k"
-                                    value="35">
-                                <label class="form-check-label" for="over40k">
-                                    Over 40,000 gallons</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="noideasize"
-                                    value="noideasize">
-                                <label class="form-check-label" for="noideasize">
-                                    I have no idea.</label>
-                            </div>
-
-                        </fieldset>
-
-                        <hr>
-                        <!-- Radios for service frequency -->
-
-                        <fieldset id="frequencyRadiosSet" class="my-4">
-
-                            <p>How often would you like service:</p>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios" id="frequencyOnce"
-                                    value="0">
-                                <label class="form-check-label" for="frequencyOnce">
-                                    Once per week</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios" id="frequencyTwice"
-                                    value="-10">
-                                <label class="form-check-label" for="frequencyTwice">
-                                    Twice per week</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios"
-                                    id="20" value="frequencyBiweekly">
-                                <label class="form-check-label" for="frequencyBiweekly">
-                                    Every two weeks</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios"
-                                    id="-10" value="frequencyWeekdays">
-                                <label class="form-check-label" for="frequencyWeekdays">
-                                    Every weekday</label>
-                            </div>
-                        </fieldset>
-
-                        <hr>
+                            <fieldset id="zipCodeSet" class="my-4" name="fieldsetzip" value="setty">
+                                <p>Please select your ZIP code:</p>
+                                <select class="custom-select" id="selecty">
+                                    <option value="0" class="zipOther"> other / not listed </option>
+                                    <option value="0"> 23060 </option>
+                                    <option value="0"> 23113 </option>
+                                    <option value="0"> 23114 </option>
+                                    <option value="0"> 23220 </option>
+                                    <option value="0"> 23221 </option>
+                                    <option value="0"> 23222 </option>
+                                    <option value="0"> 23223 </option>
+                                    <option value="0"> 23224 </option>
+                                    <option value="0"> 23225 </option>
+                                    <option value="0"> 23226 </option>
+                                    <option value="0"> 23227 </option>
+                                    <option value="0"> 23228 </option>
+                                    <option value="0"> 23229 </option>
+                                    <option value="0"> 23230 </option>
+                                    <option value="0"> 23233 </option>
+                                    <option value="0"> 23234 </option>
+                                    <option value="0"> 23235 </option>
+                                    <option value="0"> 23236 </option>
+                                    <option value="0"> 23238 </option>
+                                    <option value="0"> 23294 </option>
+                                    <option value="0" class="zipOther"> other / not listed </option>
+                                </select>
+                            </fieldset>
+                            <hr>
 
 
-                        <!-- Radios for days requested, incl note about as-available -->
-                        <fieldset id="dayRadiosSet" class="my-4">
+                            <!-- Radios for pool size -->
 
-                            <p>Please choose your preferred service day:</p>
+                            <fieldset id="poolSizeSet" class="my-4">
 
-                            <p class="text-muted"><small>This choice is for estimation purposes and is not guaranteed
-                                    until service is contracted, based on availability.</small></p>
+                                <p>Please choose the size of your pool(s):</p>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="any" value="0">
-                                <label class="form-check-label" for="any">
-                                    Any available</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="under10k"
+                                        value="0">
+                                    <label class="form-check-label" for="under10k">
+                                        10,000 gallons or less</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="weekdays"
-                                    value="0">
-                                <label class="form-check-label" for="weekdays">
-                                    Any weekday</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="10to20k"
+                                        value="0">
+                                    <label class="form-check-label" for="10to20k">
+                                        Over 10,000 to 20,000 gallons</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="weekend"
-                                    value="15">
-                                <label class="form-check-label" for="weekend">
-                                    Weekend only</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="20kto30k"
+                                        value="15">
+                                    <label class="form-check-label" for="20kto30k">
+                                        Over 20,000 to 30,000 gallons</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="friday"
-                                    value="20">
-                                <label class="form-check-label" for="friday">
-                                    Friday</label>
-                            </div>
-                        </fieldset>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="30kto40k"
+                                        value="25">
+                                    <label class="form-check-label" for="30kto40k">
+                                        Over 30,000 to 40,000 gallons</label>
+                                </div>
 
-                        <hr>
-                        <!-- Radios for filter types -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="over40k"
+                                        value="35">
+                                    <label class="form-check-label" for="over40k">
+                                        Over 40,000 gallons</label>
+                                </div>
 
-                        <fieldset id="systemRadiosSet" class="my-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="poolSizeRadios" id="noideasize"
+                                        value="noideasize">
+                                    <label class="form-check-label" for="noideasize">
+                                        I have no idea.</label>
+                                </div>
 
-                            <p>Please choose your system type:</p>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="sandChlorine"
-                                    value="0">
-                                <label class="form-check-label" for="sandChlorine">
-                                    Sand Filter with Chlorine</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="sandSalt"
-                                    value="0">
-                                <label class="form-check-label" for="sandSalt">
-                                    Sand Filter with Salt</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="deChlorine"
-                                    value="10">
-                                <label class="form-check-label" for="deChlorine">
-                                    Diatomaceous Earth (DE) with Chlorine</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="deSalt"
-                                    value="10">
-                                <label class="form-check-label" for="deSalt">
-                                    Diatomaceous Earth (DE) with Salt</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="oddsystem"
-                                    value="oddsystem">
-                                <label class="form-check-label" for="oddsystem">
-                                    My system is different.</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="noideasystem"
-                                    value="noideasystem">
-                                <label class="form-check-label" for="noideasystem">
-                                    I have no idea.</label>
-                            </div>
-                        </fieldset>
-
-                        <hr>
+                            </fieldset>
+                            <hr>
 
 
-                        <!-- Checkboxes for special features and/or circumstances-->
+                            <!-- Radios for service frequency -->
+
+                            <fieldset id="frequencyRadiosSet" class="my-4">
+
+                                <p>How often would you like service:</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="frequencyRadios"
+                                        id="frequencyOnce" value="0">
+                                    <label class="form-check-label" for="frequencyOnce">
+                                        Once per week</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="frequencyRadios"
+                                        id="frequencyTwice" value="-10">
+                                    <label class="form-check-label" for="frequencyTwice">
+                                        Twice per week</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="frequencyRadios" id="20"
+                                        value="frequencyBiweekly">
+                                    <label class="form-check-label" for="frequencyBiweekly">
+                                        Every two weeks</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="frequencyRadios" id="-10"
+                                        value="frequencyWeekdays">
+                                    <label class="form-check-label" for="frequencyWeekdays">
+                                        Every weekday</label>
+                                </div>
+                            </fieldset>
+                            <hr>
 
 
-                        <fieldset id="specialFeaturesSet">
+                            <!-- Radios for days requested, incl note about as-available -->
 
-                            <p>Please check any special features or circumstances that are part of your service request.</p>
+                            <fieldset id="dayRadiosSet" class="my-4">
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="specialnone"
-                                    value="0">
-                                <label class="form-check-label" for="specialnone">
-                                    None</label>
-                            </div>
+                                <p>Please choose your preferred service day:</p>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="hotTub"
-                                    value="25">
-                                <label class="form-check-label" for="hotTub">
-                                    Hot Tub (with separate filter/sanitizing system)</label>
-                            </div>
+                                <p class="text-muted"><small>This choice is for estimation purposes and is not
+                                        guaranteed
+                                        until service is contracted, based on availability.</small></p>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="waterfall"
-                                    value="10">
-                                <label class="form-check-label" for="waterfall">
-                                    Waterfall</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dayRadios" id="any" value="0">
+                                    <label class="form-check-label" for="any">
+                                        Any available</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="waterslide"
-                                    value="5">
-                                <label class="form-check-label" for="waterslide">
-                                    Waterslide</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dayRadios" id="weekdays"
+                                        value="0">
+                                    <label class="form-check-label" for="weekdays">
+                                        Any weekday</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="fountain"
-                                    value="15">
-                                <label class="form-check-label" for="fountain">
-                                    Fountain (separate from pool)</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dayRadios" id="weekend"
+                                        value="15">
+                                    <label class="form-check-label" for="weekend">
+                                        Weekend only</label>
+                                </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="locked"
-                                    value="5">
-                                <label class="form-check-label" for="locked">
-                                    Locked gate or other impediment</label>
-                            </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="dayRadios" id="friday"
+                                        value="20">
+                                    <label class="form-check-label" for="friday">
+                                        Friday</label>
+                                </div>
+                            </fieldset>
+                            <hr>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="specialRadios" id="otherFeature"
-                                    value="otherFeature">
-                                <label class="form-check-label" for="otherFeature">
-                                    Other / Not Listed / Not Sure</label>
-                            </div>
-                        </fieldset>
 
-                        <button>Go!</button>
+                            <!-- Radios for filter types -->
+
+                            <fieldset id="systemRadiosSet" class="my-4">
+
+                                <p>Please choose your system type:</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="sandChlorine"
+                                        value="0">
+                                    <label class="form-check-label" for="sandChlorine">
+                                        Sand Filter with Chlorine</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="sandSalt"
+                                        value="0">
+                                    <label class="form-check-label" for="sandSalt">
+                                        Sand Filter with Salt</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="deChlorine"
+                                        value="10">
+                                    <label class="form-check-label" for="deChlorine">
+                                        Diatomaceous Earth (DE) with Chlorine</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="deSalt"
+                                        value="10">
+                                    <label class="form-check-label" for="deSalt">
+                                        Diatomaceous Earth (DE) with Salt</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="oddsystem"
+                                        value="oddsystem">
+                                    <label class="form-check-label" for="oddsystem">
+                                        My system is different.</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="systemRadios" id="noideasystem"
+                                        value="noideasystem">
+                                    <label class="form-check-label" for="noideasystem">
+                                        I have no idea.</label>
+                                </div>
+                            </fieldset>
+                            <hr>
+
+
+                            <!-- Checkboxes for special features and/or circumstances-->
+
+                            <fieldset id="specialFeaturesSet">
+
+                                <p>Please check any special features or circumstances that are part of your service
+                                    request.</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios"
+                                        id="specialnone" value="0">
+                                    <label class="form-check-label" for="specialnone">
+                                        None</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios" id="hotTub"
+                                        value="25">
+                                    <label class="form-check-label" for="hotTub">
+                                        Hot Tub (with separate filter/sanitizing system)</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios" id="waterfall"
+                                        value="10">
+                                    <label class="form-check-label" for="waterfall">
+                                        Waterfall</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios" id="waterslide"
+                                        value="5">
+                                    <label class="form-check-label" for="waterslide">
+                                        Waterslide</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios" id="fountain"
+                                        value="15">
+                                    <label class="form-check-label" for="fountain">
+                                        Fountain (separate from pool)</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios" id="locked"
+                                        value="5">
+                                    <label class="form-check-label" for="locked">
+                                        Locked gate or other impediment</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="specialRadios"
+                                        id="otherFeature" value="otherFeature">
+                                    <label class="form-check-label" for="otherFeature">
+                                        Other / Not Listed / Not Sure</label>
+                                </div>
+                            </fieldset>
+
+
+                            <!-- Submit button -->
 
 
                     </div>
@@ -443,7 +450,7 @@
 
 
 
-   
+
 
     <script type="text/javascript">var submitted = false;</script>
     <script type="text/javascript">

@@ -40,6 +40,7 @@ $("select, input").bind('click', function () {
 
 
 //     console.log('binding worked');
+
 //     if ($("#acknowledgementCheckbox").prop('checked') == false) {
 //         $("#noAcknowledgement").setAttribute('display', 'block');
 //     } else {
@@ -49,36 +50,109 @@ $("select, input").bind('click', function () {
 
 
 
+// $(document).ready(function () {
+//     $("button").click(function () {
+
+//         window.scrollTo(0, 0);
+
+
+//         $("fieldset").find("input").each(function () {
+
+
+
+//             if ($(this).prop('checked') == false) {
+
+
+
+//                 console.log('not checked ID is: ' + this.id);
+
+//                 // if ($(this).prop('checked') == true) {
+//                 //     $(this).addClass('new');
+//                 // }
+//             };
+
+//         });
+
+//     })
+
+// });
+
+
+
+
+
+// $.each($("input:checked"), function () {
+
+//     $('input').addClass('new');
+
+// });
+
+
+// if ($('#acknowledgementCheckbox').prop('checked') == false) {
+
+//     $("#noAcknowledgement").addClass('new');
+
+// } else if ($('#acknowledgementCheckbox').prop('checked') == true) {
+
+//     $("#noAcknowledgement").classList.remove('new');
+
+
+
+// } else if (
+
+//     $('.zipOther').prop('selected') == true) {
+
+//     $("#zipMessage").addClass('new');
+
+// } else {
+
+//     console.log('I made it through!');
+
+// }
+
+
+
+
+
+
+
+// Displays Error when Acknowledgement Checkbox is not checked
+
+// $(document).ready(function () {
+//     $("#gobutton").click(function () {
+//         window.scrollTo(0, 0);
+//         if ($("#acknowledgementCheckbox").prop('checked') == false) {
+//             document.getElementById("noAcknowledgement").style.display = 'block';
+//         }
+//     });
+// });
+
+
+
+// Removes Error message from Acknowledgement Checkbox when checked
+
 $(document).ready(function () {
-    $("button").click(function () {
-
+    $("#acknowledgementCheckbox").click(function () {
         window.scrollTo(0, 0);
-
-        if ($('#acknowledgementCheckbox').prop('checked') == false) {
-
-            $("#noAcknowledgement").addClass('new');
-
-        } else if ($('#acknowledgementCheckbox').prop('checked') == true) {
-
-            $("#noAcknowledgement").classList.remove('new');
-        
-
-
-        } else if (
-
-            $('.zipOther').prop('selected') == true) {
-
-            $("#zipMessage").addClass('new');
-
-        } else {
-
-            console.log('I made it through!');
-
+        if ($(this).prop('checked') == true) {
+            document.getElementById("noAcknowledgement").style.display = 'none';
         }
-
-
     });
+});
 
+
+
+// Checks which fieldsets are not checked
+
+$(document).ready(function () {
+    $("#gobutton").click(function () {
+        $("fieldset").each(function () {
+            if ($(this).find('input:checked').length == 0) {
+                this.style.color = 'red';
+                document.getElementById("requiredError").style.display = "block";
+            }
+        });
+    });
 });
 
 
@@ -87,25 +161,20 @@ $(document).ready(function () {
 
 
 
-// $(document).ready(function () {
-//     $("button").click(function () {
 
-//         window.scrollTo(0, 0);
+            // if ($("#acknowledgementCheckbox").prop('checked') == false) {
+            //     $("#noAcknowledgement").setAttribute('display', 'block');
+            //     return;
+            // } else {
+            //     console.log('All good here!');
+            // }
 
-//         if ($("#acknowledgementCheckbox").prop('checked') == false) {
-//             $("#noAcknowledgement").setAttribute('display', 'block');
-//             return;
-//         } else {
-//             console.log('All good here!');
-//         }
+            // var feeArray = [];
 
-//         var feeArray = [];
+            // $.each($("input:checked"), function () {
+            //     feeArray.push($(this).val());
+            // });
 
-//         $.each($("input:checked"), function () {
-//             feeArray.push($(this).val());
-//         });
+            // console.log('Array is: ' + feeArray);
 
-//         console.log('Array is: ' + feeArray);
-//     });
-// });
 

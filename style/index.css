@@ -334,15 +334,24 @@ a:active {
   background-color: #006989;
 }
 
-.hiddenmessages {
+/* .hiddenmessages {
   display: none;
-}
+} */
 
 .new {
   display: block !important;
   color: red;
 }
 
+#noAcknowledgement {
+  display: none;
+  color: red;
+}
+
+#requiredError {
+  display: none;
+  color: red;
+}
 
 
 

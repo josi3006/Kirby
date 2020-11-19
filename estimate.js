@@ -18,7 +18,7 @@
 // });
 
 
-$("fieldset").bind('submit', function () {
+$(".check").bind('submit', function () {
     $(this).prop('checked', false);
 });
 
@@ -131,22 +131,27 @@ $("select, input").bind('click', function () {
 
 // Removes Error message from Acknowledgement Checkbox when checked
 
-$(document).ready(function () {
-    $("#acknowledgementCheckbox").click(function () {
-        window.scrollTo(0, 0);
-        if ($(this).prop('checked') == true) {
-            document.getElementById("noAcknowledgement").style.display = 'none';
-        }
-    });
-});
+// $(document).ready(function () {
+//     $("#acknowledgementCheckbox").click(function () {
+//         window.scrollTo(0, 0);
+//         if ($(this).prop('checked') == true) {
+//             document.getElementById("noAcknowledgement").style.display = 'none';
+//         }
+//     });
+// });
 
 
 
-// Checks which fieldsets are not checked
+
+
+
+
+
+// Checks which fieldsets are not checked, turns them red
 
 $(document).ready(function () {
     $("#gobutton").click(function () {
-        $("fieldset").each(function () {
+        $(".check").each(function () {
             if ($(this).find('input:checked').length == 0) {
                 this.style.color = 'red';
                 document.getElementById("requiredError").style.display = "block";
@@ -156,7 +161,52 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    $("#zipbutton").click(function () {
 
+
+        var zipFieldSet = document.getElementById("selecty");
+        var selectedOption = zipFieldSet.options[zipFieldSet.selectedIndex].value;
+
+        if (selectedOption == 'none') {
+            // $('#zipCodeSet').style.color = 'red';
+            console.log('Not checked');
+        }
+    });
+});
+
+
+
+
+$(document).ready(function () {
+    $(".check").every(function () {
+        if ($(this).find('input:checked').length > 0) {
+            document.getElementById("requiredError").style.display = "none";
+            console.log('Allclear!!');
+        }
+    });
+});
+
+
+
+
+// Removes red when error fieldsets are checked
+
+$(document).ready(function () {
+    $(".check").click(function () {
+        if ($(this).find('input:checked').length > 0) {
+            this.style.color = '#006989';
+        }
+    });
+});
+
+$(document).ready(function () {
+    $(".check").click(function () {
+        if ($(this).find('selected' === true)) {
+            this.style.color = '#006989';
+        }
+    });
+});
 
 
 

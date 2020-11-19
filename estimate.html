@@ -68,12 +68,12 @@
 
                         <button type="submit" id="gobutton">Go!</button>
 
-                        <button type="submit" id="ungobutton">UnGo!</button>
+                        <button type="submit" id="zipbutton">UnGo!</button>
 
 
                         <!-- Required checkbox to acknowledge estimate is not binding -->
 
-                        <fieldset id="acknowledgementCheckboxSet" class="mb-4">
+                        <fieldset id="acknowledgementCheckboxSet" class="mb-4 check">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="acknowledgementCheckbox" value="80"
                                     required>
@@ -89,9 +89,10 @@
                         <hr>
                         <!-- ZIP code dropdown -->
 
-                        <fieldset id="zipCodeSet" class="my-4" name="fieldsetzip" value="setty">
+                        <fieldset id="zipCodeSet" class="my-4 opt" name="fieldsetzip" value="setty">
                             <p>Please select your ZIP code:</p>
-                            <select class="custom-select" id="selecty">
+                            <select class="custom-select" id="selecty" name="selectlist">
+                                <option value="none"> - </option>
                                 <option value="0" class="zipOther"> other / not listed </option>
                                 <option value="0"> 23060 </option>
                                 <option value="0"> 23113 </option>
@@ -121,7 +122,7 @@
 
                         <!-- Radios for pool size -->
 
-                        <fieldset id="poolSizeSet" class="my-4">
+                        <fieldset id="poolSizeSet" class="my-4 check">
 
                             <p>Please choose the size of your pool(s):</p>
 
@@ -173,7 +174,7 @@
 
                         <!-- Radios for service frequency -->
 
-                        <fieldset id="frequencyRadiosSet" class="my-4">
+                        <fieldset id="frequencyRadiosSet" class="my-4 check">
 
                             <p>How often would you like service:</p>
 
@@ -210,7 +211,7 @@
 
                         <!-- Radios for days requested, incl note about as-available -->
 
-                        <fieldset id="dayRadiosSet" class="my-4">
+                        <fieldset id="dayRadiosSet" class="my-4 check">
 
                             <p>Please choose your preferred service day:</p>
 
@@ -247,7 +248,7 @@
 
                         <!-- Radios for filter types -->
 
-                        <fieldset id="systemRadiosSet" class="my-4">
+                        <fieldset id="systemRadiosSet" class="my-4 check">
 
                             <p>Please choose your system type:</p>
 
@@ -297,7 +298,7 @@
 
                         <!-- Checkboxes for special features and/or circumstances-->
 
-                        <fieldset id="specialFeaturesSet">
+                        <fieldset id="specialFeaturesSet" class="my-4 check">
 
                             <p>Please check any special features or circumstances that are part of your service
                                 request.</p>

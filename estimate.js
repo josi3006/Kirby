@@ -151,27 +151,23 @@ $("select, input").bind('click', function () {
 
 $(document).ready(function () {
     $("#gobutton").click(function () {
+
+        // Turn checkboxes red if unchecked
+
         $(".check").each(function () {
             if ($(this).find('input:checked').length == 0) {
                 this.style.color = 'red';
                 document.getElementById("requiredError").style.display = "block";
             }
         });
-    });
-});
 
+        // Turn zip code selector red if unselected
 
-$(document).ready(function () {
-    $("#zipbutton").click(function () {
-
-
-        var zipFieldSet = document.getElementById("selecty");
-        var selectedOption = zipFieldSet.options[zipFieldSet.selectedIndex].value;
-
-        if (selectedOption == 'none') {
-            // $('#zipCodeSet').style.color = 'red';
-            console.log('Not checked');
-        }
+        $("#selecty").each(function () {
+            if (this.value = "none") {
+                document.getElementById('zipCodeSet').style.color = 'red';
+            }
+        });
     });
 });
 
@@ -201,12 +197,14 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".check").click(function () {
-        if ($(this).find('selected' === true)) {
-            this.style.color = '#006989';
+    $("#selecty").click(function () {
+        if (this.value != "none") {
+            document.getElementById('zipCodeSet').style.color = '#006989';
         }
     });
 });
+
+
 
 
 

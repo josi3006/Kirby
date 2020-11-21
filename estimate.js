@@ -146,43 +146,46 @@ $("select, input").bind('click', function () {
 
 
 
+// Turn checkboxes red if unchecked
 
-// Checks which fieldsets are not checked, turns them red
 
 $(document).ready(function () {
     $("#gobutton").click(function () {
-
-        // Turn checkboxes red if unchecked
-
         $(".check").each(function () {
             if ($(this).find('input:checked').length == 0) {
                 this.style.color = 'red';
                 document.getElementById("requiredError").style.display = "block";
             }
         });
-
-        // Turn zip code selector red if unselected
-
-        $("#selecty").each(function () {
-            if (this.value = "none") {
-                document.getElementById('zipCodeSet').style.color = 'red';
-            }
-        });
     });
 });
 
-
-
+// Turn zip code selector red if unselected
 
 $(document).ready(function () {
-    $(".check").every(function () {
-        if ($(this).find('input:checked').length > 0) {
-            document.getElementById("requiredError").style.display = "none";
-            console.log('Allclear!!');
+    $("#gobutton").click(function () {
+
+        var selectlist = document.getElementById('selecty');
+
+        if (selectlist.options[selectlist.selectedIndex].value == "none") {
+            document.getElementById('zipCodeSet').style.color = 'red';
         }
     });
 });
 
+
+
+// check all fieldsets for checked/blue then remove error msg
+
+$(document).ready(function () {
+    $("#otherbutton").click(function () {
+
+        var listy = document.getElementsByClassName('check');
+        console.log(listy);
+
+
+    });
+});
 
 
 

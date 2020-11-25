@@ -146,8 +146,7 @@ $("select, input").bind('click', function () {
 
 
 
-// Turn checkboxes red if unchecked
-
+// Turn checkboxes red and display error message if unchecked
 
 $(document).ready(function () {
     $("#gobutton").click(function () {
@@ -160,7 +159,7 @@ $(document).ready(function () {
     });
 });
 
-// Turn zip code selector red if unselected
+// Turn zip code selector red and display error message if unselected
 
 $(document).ready(function () {
     $("#gobutton").click(function () {
@@ -168,7 +167,9 @@ $(document).ready(function () {
         var selectlist = document.getElementById('selecty');
 
         if (selectlist.options[selectlist.selectedIndex].value == "none") {
-            document.getElementById('zipCodeSet').style.color = 'red';
+            document.getElementById('zipSelectLabel').style.color = 'red';
+            document.getElementById("requiredError").style.display = "block";
+
         }
     });
 });
@@ -177,15 +178,66 @@ $(document).ready(function () {
 
 // check all fieldsets for checked/blue then remove error msg
 
+// $(document).ready(function () {
+//     $("#otherbutton").click(function () {
+
+
+
+//         var selectlist = document.getElementById('selecty');
+
+//         if (selectlist.options[selectlist.selectedIndex].value != "none") {
+//             console.log('zip is OK!');
+//         } else {
+//             console.log('zip is not ok at all.');
+//         }
+
+
+
+//         $(".check").each(function () {
+
+//             if ($(this).find('input:checked').length > 0) {
+//                 console.log(this.id + ' is OK!');
+//             } else {
+//                 console.log(this.id + 'is not ok at all.');
+//             }
+//         });
+
+//     });
+
+// });
+
+
 $(document).ready(function () {
     $("#otherbutton").click(function () {
 
-        var listy = document.getElementsByClassName('check');
-        console.log(listy);
+        var selectlist = document.getElementById('selecty');
+
+        if (selectlist.options[selectlist.selectedIndex].value != "none" &&
+
+
+            $(".check").each(function () {
+
+                $(this).find('input:checked').length > 0
+
+            })
+        ) {
+            console.log('It is all good!!');
+            document.getElementById("requiredError").style.display = "none";
+
+
+        } else {
+            console.log('es muy malo.')
+        }
 
 
     });
+
 });
+
+
+
+
+
 
 
 
@@ -202,7 +254,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#selecty").click(function () {
         if (this.value != "none") {
-            document.getElementById('zipCodeSet').style.color = '#006989';
+            document.getElementById('zipSelectLabel').style.color = '#006989';
         }
     });
 });

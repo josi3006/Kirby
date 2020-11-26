@@ -1,146 +1,13 @@
 
 
-// $("fieldset").click(function (event) {
-//     console.log(" was clicked");
-//     // document.getElementById(event.currentTarget.id).setAttribute('disabled', 'disabled');
-
-// });
-
-
-// $("#zipCodeSet").bind('change', function () {
-//     console.log('this works');
-//     $("#zipCodeSet").attr('disabled', 'disabled');
-// });
-
-// $("fieldset").bind('change', function () {
-//     console.log('this works');
-//     $(this).attr('disabled', 'disabled');
-// });
-
-
 $(".check").bind('submit', function () {
     $(this).prop('checked', false);
 });
 
-// $("input").bind('click', function () {
-//     console.log(this.value + ' is the value clicked')
-// });
-
-// $("select").bind('click', function () {
-//     console.log(this.value + ' is the value clicked')
-// });
 
 $("select, input").bind('click', function () {
     console.log(this.value + ' is the value clicked')
 });
-
-
-
-// $("#acknowledgementCheckbox").bind('submit', function () {
-
-
-//     console.log('binding worked');
-
-//     if ($("#acknowledgementCheckbox").prop('checked') == false) {
-//         $("#noAcknowledgement").setAttribute('display', 'block');
-//     } else {
-//         return;
-//     }
-// });
-
-
-
-// $(document).ready(function () {
-//     $("button").click(function () {
-
-//         window.scrollTo(0, 0);
-
-
-//         $("fieldset").find("input").each(function () {
-
-
-
-//             if ($(this).prop('checked') == false) {
-
-
-
-//                 console.log('not checked ID is: ' + this.id);
-
-//                 // if ($(this).prop('checked') == true) {
-//                 //     $(this).addClass('new');
-//                 // }
-//             };
-
-//         });
-
-//     })
-
-// });
-
-
-
-
-
-// $.each($("input:checked"), function () {
-
-//     $('input').addClass('new');
-
-// });
-
-
-// if ($('#acknowledgementCheckbox').prop('checked') == false) {
-
-//     $("#noAcknowledgement").addClass('new');
-
-// } else if ($('#acknowledgementCheckbox').prop('checked') == true) {
-
-//     $("#noAcknowledgement").classList.remove('new');
-
-
-
-// } else if (
-
-//     $('.zipOther').prop('selected') == true) {
-
-//     $("#zipMessage").addClass('new');
-
-// } else {
-
-//     console.log('I made it through!');
-
-// }
-
-
-
-
-
-
-
-// Displays Error when Acknowledgement Checkbox is not checked
-
-// $(document).ready(function () {
-//     $("#gobutton").click(function () {
-//         window.scrollTo(0, 0);
-//         if ($("#acknowledgementCheckbox").prop('checked') == false) {
-//             document.getElementById("noAcknowledgement").style.display = 'block';
-//         }
-//     });
-// });
-
-
-
-// Removes Error message from Acknowledgement Checkbox when checked
-
-// $(document).ready(function () {
-//     $("#acknowledgementCheckbox").click(function () {
-//         window.scrollTo(0, 0);
-//         if ($(this).prop('checked') == true) {
-//             document.getElementById("noAcknowledgement").style.display = 'none';
-//         }
-//     });
-// });
-
-
 
 
 
@@ -159,6 +26,8 @@ $(document).ready(function () {
     });
 });
 
+
+
 // Turn zip code selector red and display error message if unselected
 
 $(document).ready(function () {
@@ -169,69 +38,33 @@ $(document).ready(function () {
         if (selectlist.options[selectlist.selectedIndex].value == "none") {
             document.getElementById('zipSelectLabel').style.color = 'red';
             document.getElementById("requiredError").style.display = "block";
-
         }
     });
 });
 
 
 
-// check all fieldsets for checked/blue then remove error msg
-
-// $(document).ready(function () {
-//     $("#otherbutton").click(function () {
-
-
-
-//         var selectlist = document.getElementById('selecty');
-
-//         if (selectlist.options[selectlist.selectedIndex].value != "none") {
-//             console.log('zip is OK!');
-//         } else {
-//             console.log('zip is not ok at all.');
-//         }
-
-
-
-//         $(".check").each(function () {
-
-//             if ($(this).find('input:checked').length > 0) {
-//                 console.log(this.id + ' is OK!');
-//             } else {
-//                 console.log(this.id + 'is not ok at all.');
-//             }
-//         });
-
-//     });
-
-// });
-
+// Remove error message when all required sets are checked
 
 $(document).ready(function () {
-    $("#otherbutton").click(function () {
+    $("fieldset").click(function () {
 
         var selectlist = document.getElementById('selecty');
 
+        // Make an array of each fieldset
+
         if (selectlist.options[selectlist.selectedIndex].value != "none" &&
 
+// use fieldset array with .every() method
 
             $(".check").each(function () {
-
                 $(this).find('input:checked').length > 0
-
             })
+
         ) {
-            console.log('It is all good!!');
             document.getElementById("requiredError").style.display = "none";
-
-
-        } else {
-            console.log('es muy malo.')
         }
-
-
     });
-
 });
 
 
@@ -241,7 +74,7 @@ $(document).ready(function () {
 
 
 
-// Removes red when error fieldsets are checked
+// Removes red when individual error fieldsets are checked
 
 $(document).ready(function () {
     $(".check").click(function () {
@@ -260,24 +93,5 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
-            // if ($("#acknowledgementCheckbox").prop('checked') == false) {
-            //     $("#noAcknowledgement").setAttribute('display', 'block');
-            //     return;
-            // } else {
-            //     console.log('All good here!');
-            // }
-
-            // var feeArray = [];
-
-            // $.each($("input:checked"), function () {
-            //     feeArray.push($(this).val());
-            // });
-
-            // console.log('Array is: ' + feeArray);
 
 

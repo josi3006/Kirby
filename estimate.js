@@ -1,88 +1,85 @@
 
 
-$(".check").bind('submit', function () {
-    $(this).prop('checked', false);
-});
+// $(".check").bind('submit', function () {
+//     $(this).prop('checked', false);
+// });
 
 
-$("select, input").bind('click', function () {
-    console.log(this.value + ' is the value clicked')
-});
+// $("select, input").bind('click', function () {
+//     console.log(this.value + ' is the value clicked')
+// });
 
 
 
 
 
-// Turn checkboxes red and display error message if unchecked
 
 $(document).ready(function () {
-    $("#gobutton").click(function () {
-        $(".check").each(function () {
-            if ($(this).find('input:checked').length == 0) {
-                this.style.color = 'red';
-                document.getElementById("requiredError").style.display = "block";
-            }
-        });
-    });
+    blueOnCheck();
+    removesError();
+    $("#gobutton").click(errorCheck);
 });
 
 
 
-// Turn zip code selector red and display error message if unselected
 
-$(document).ready(function () {
-    $("#gobutton").click(function () {
+// Turns individual fieldsets red and displays error message if unchecked
 
-        var selectlist = document.getElementById('selecty');
-
-        if (selectlist.options[selectlist.selectedIndex].value == "none") {
-            document.getElementById('zipSelectLabel').style.color = 'red';
+const errorCheck = () => {
+    $(".check").each(function () {
+        if ($(this).find('input:checked').length == 0) {
+            this.style.color = 'red';
             document.getElementById("requiredError").style.display = "block";
+            scrollTo(0, 0);
         }
     });
-});
+    var selectlist = document.getElementById('selecty');
+    if (selectlist.options[selectlist.selectedIndex].value == "none") {
+        document.getElementById('zipSelectLabel').style.color = 'red';
+        document.getElementById("requiredError").style.display = "block";
+        scrollTo(0, 0);
+    }
+
+};
 
 
 
-// Remove error message when all required sets are checked
+// Removes red from individual error fieldsets when checked
 
-// $(document).ready(function () {
-//     $("fieldset").click(function () {
+const blueOnCheck = () => {
+    $(".check").click(function () {
+        if ($(this).find('input:checked').length > 0) {
+            this.style.color = '#006989';
+        }
+    });
 
-//         var selectlist = document.getElementById('selecty');
 
-//         if ($(".check").each(function () {
-//             $(this).find('input:checked').length == 0
-//         })) {
-//             console.log("nope");
-//         } else {
-//             console.log('inputs are good.');
-//         }
+    $("#selecty").click(function () {
+        if (this.value != "none") {
+            document.getElementById('zipSelectLabel').style.color = '#006989';
+        }
+    });
 
-// ) {
-//     document.getElementById("requiredError").style.display = "none";
-// }
-//     });
-// });
+};
+
+
+
+
+// Removes error message when all required sets are checked
 
 const checkZip = () => {
     var selectlist = document.getElementById('selecty');
     if (selectlist.options[selectlist.selectedIndex].value == "none") {
         console.log('zip is unchecked');
     } else {
-            document.getElementById("requiredError").style.display = "none";
+        document.getElementById("requiredError").style.display = "none";
     }
 }
 
 
-
-
-
-$(document).ready(function () {
+const removesError = () => {
     $("fieldset").click(function () {
-
         var count = 0;
-
         $(".check").each(function () {
             if ($(this).find('input:checked').length == 0) {
                 count = count + 1;
@@ -93,10 +90,10 @@ $(document).ready(function () {
             console.log('inputs are good!');
             checkZip();
         } else {
-            console.log('count is ' + count);
+            console.log("something's missing");
         };
     });
-});
+};
 
 
 
@@ -104,23 +101,6 @@ $(document).ready(function () {
 
 
 
-// Removes red when individual error fieldsets are checked
-
-$(document).ready(function () {
-    $(".check").click(function () {
-        if ($(this).find('input:checked').length > 0) {
-            this.style.color = '#006989';
-        }
-    });
-});
-
-$(document).ready(function () {
-    $("#selecty").click(function () {
-        if (this.value != "none") {
-            document.getElementById('zipSelectLabel').style.color = '#006989';
-        }
-    });
-});
 
 
 

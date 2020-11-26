@@ -51,19 +51,37 @@ $(document).ready(function () {
 
         var selectlist = document.getElementById('selecty');
 
-        // Make an array of each fieldset
-
-        if (selectlist.options[selectlist.selectedIndex].value != "none" &&
-
-// use fieldset array with .every() method
-
-            $(".check").each(function () {
-                $(this).find('input:checked').length > 0
-            })
-
-        ) {
-            document.getElementById("requiredError").style.display = "none";
+        function isChecked() {
+            if (("input:checked").length > 0) {
+                return true;
+            } else {
+                return false;
+            }
         }
+
+        var fieldsetArray = [
+            $("#acknowledgementCheckboxSet"),
+            $("#poolSizeSet"),
+            $("#frequencyRadiosSet"),
+            $("#dayRadiosSet"),
+            $("#systemRadiosSet"),
+            $("#specialFeaturesSet")
+        ];
+
+
+        if (fieldsetArray.every(isChecked) &&
+            selectlist.options[selectlist.selectedIndex].value != "none") {
+
+            console.log("Great!");
+        }
+
+        //     $(".check").each(function () {
+        //         $(this).find('input:checked').length > 0
+        //     })
+
+        // ) {
+        //     document.getElementById("requiredError").style.display = "none";
+        // }
     });
 });
 

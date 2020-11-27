@@ -80,7 +80,6 @@
                                     an
                                     estimate, and that actual fees may vary depending on real-world factors.
                                 </label>
-                                <div id="noAcknowledgement" class="hiddenmessages">You must check here to proceed.</div>
                             </div>
                         </fieldset>
 
@@ -94,28 +93,28 @@
                             <p id="zipSelectLabel" class="allSelects">Please select your ZIP code:</p>
                             <select class="custom-select opt" id="selecty" name="selectlist">
                                 <option value="none"> - </option>
-                                <option value="meh" class="zipOther"> other / not listed </option>
-                                <option value="yes"> 23060 </option>
-                                <option value="yes"> 23113 </option>
-                                <option value="yes"> 23114 </option>
-                                <option value="yes"> 23220 </option>
-                                <option value="yes"> 23221 </option>
-                                <option value="0"> 23222 </option>
-                                <option value="0"> 23223 </option>
+                                <option value="far" class="zipOther"> other / not listed </option>
+                                <option value="15"> 23060 </option>
+                                <option value="15"> 23113 </option>
+                                <option value="20"> 23114 </option>
+                                <option value="0"> 23220 </option>
+                                <option value="0"> 23221 </option>
+                                <option value="10"> 23222 </option>
+                                <option value="15"> 23223 </option>
                                 <option value="0"> 23224 </option>
                                 <option value="0"> 23225 </option>
                                 <option value="0"> 23226 </option>
-                                <option value="0"> 23227 </option>
-                                <option value="0"> 23228 </option>
-                                <option value="0"> 23229 </option>
+                                <option value="10"> 23227 </option>
+                                <option value="10"> 23228 </option>
+                                <option value="5"> 23229 </option>
                                 <option value="0"> 23230 </option>
-                                <option value="0"> 23233 </option>
-                                <option value="0"> 23234 </option>
-                                <option value="0"> 23235 </option>
-                                <option value="0"> 23236 </option>
-                                <option value="0"> 23238 </option>
-                                <option value="0"> 23294 </option>
-                                <option value="0" class="zipOther"> other / not listed </option>
+                                <option value="10"> 23233 </option>
+                                <option value="10"> 23234 </option>
+                                <option value="10"> 23235 </option>
+                                <option value="10"> 23236 </option>
+                                <option value="15"> 23238 </option>
+                                <option value="5"> 23294 </option>
+                                <option value="far" class="zipOther"> other / not listed </option>
                             </select>
                         </fieldset>
                         <hr>
@@ -127,18 +126,13 @@
 
                             <p>Please choose the size of your pool(s):</p>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="poolSizeRadios" id="under10k"
-                                    value="0">
-                                <label class="form-check-label" for="under10k">
-                                    10,000 gallons or less</label>
-                            </div>
+                           
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="poolSizeRadios" id="10to20k"
                                     value="0">
                                 <label class="form-check-label" for="10to20k">
-                                    Over 10,000 to 20,000 gallons</label>
+                                    Under 20,000 gallons</label>
                             </div>
 
                             <div class="form-check">
@@ -188,7 +182,7 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="frequencyRadios" id="frequencyTwice"
-                                    value="-10">
+                                    value="twiceperweek">
                                 <label class="form-check-label" for="frequencyTwice">
                                     Twice per week</label>
                             </div>
@@ -202,7 +196,7 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="frequencyRadios" id="-10"
-                                    value="frequencyWeekdays">
+                                    value="allfivedays">
                                 <label class="form-check-label" for="frequencyWeekdays">
                                     Every weekday</label>
                             </div>
@@ -225,19 +219,7 @@
                                 <label class="form-check-label" for="any">
                                     Any available</label>
                             </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="weekdays" value="0">
-                                <label class="form-check-label" for="weekdays">
-                                    Any weekday</label>
-                            </div>
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dayRadios" id="weekend" value="15">
-                                <label class="form-check-label" for="weekend">
-                                    Weekend only</label>
-                            </div>
-
+                            
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="dayRadios" id="friday" value="20">
                                 <label class="form-check-label" for="friday">
@@ -262,7 +244,7 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="systemRadios" id="sandSalt"
-                                    value="0">
+                                    value="10">
                                 <label class="form-check-label" for="sandSalt">
                                     Sand Filter with Salt</label>
                             </div>
@@ -275,7 +257,7 @@
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="systemRadios" id="deSalt" value="10">
+                                <input class="form-check-input" type="radio" name="systemRadios" id="deSalt" value="20">
                                 <label class="form-check-label" for="deSalt">
                                     Diatomaceous Earth (DE) with Salt</label>
                             </div>
@@ -313,7 +295,7 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="specialRadios" id="hotTub"
-                                    value="25">
+                                    value="35">
                                 <label class="form-check-label" for="hotTub">
                                     Hot Tub (with separate filter/sanitizing system)</label>
                             </div>
@@ -327,14 +309,14 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="specialRadios" id="waterslide"
-                                    value="5">
+                                    value="10">
                                 <label class="form-check-label" for="waterslide">
                                     Waterslide</label>
                             </div>
 
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="specialRadios" id="fountain"
-                                    value="15">
+                                    value="20">
                                 <label class="form-check-label" for="fountain">
                                     Fountain (separate from pool)</label>
                             </div>

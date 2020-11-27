@@ -1,19 +1,4 @@
 
-
-// $(".check").bind('submit', function () {
-//     $(this).prop('checked', false);
-// });
-
-
-// $("select, input").bind('click', function () {
-//     console.log(this.value + ' is the value clicked')
-// });
-
-
-
-
-
-
 $(document).ready(function () {
     blueOnCheck();
     removesError();
@@ -21,6 +6,9 @@ $(document).ready(function () {
 });
 
 
+const mathTime = () => {
+    console.log("Let's go!");
+}
 
 
 // Turns individual fieldsets red and displays error message if unchecked
@@ -38,8 +26,7 @@ const errorCheck = () => {
         document.getElementById('zipSelectLabel').style.color = 'red';
         document.getElementById("requiredError").style.display = "block";
         scrollTo(0, 0);
-    }
-
+    };
 };
 
 
@@ -94,6 +81,21 @@ const removesError = () => {
         };
     });
 };
+
+
+
+
+// $(".check").bind('submit', function () {
+//     $(this).prop('checked', false);
+// });
+
+
+// $("select, input").bind('click', function () {
+//     console.log(this.value + ' is the value clicked')
+// });
+
+
+
 
 
 

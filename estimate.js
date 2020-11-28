@@ -8,16 +8,83 @@ $(document).ready(function () {
 
 const mathTime = () => {
     console.log("Let's go!");
-}
+    var valueArray = [];
+    $("input:checked").each(function () {
+
+        switch (this.value) {
+
+            case 'noideasize':
+                console.log('No idea pool size');
+                break;
+
+            case 'oddsystem':
+                console.log('I have an odd system');
+                break;
+
+            case 'noideasystem':
+                console.log('No Idea what system i have');
+                break;
+
+            case 'otherfeature':
+                console.log('i have some other feature');
+                break;
+
+            default:
+                valueArray.push(this.value);
+
+
+        }
+
+        // if (this.value == 'far') {
+        //     console.log('Far zip code');
+        // } else if (this.value == 'noideasize') {
+        //     console.log('No Idea Pool Size');
+        // } else if (this.value == 'oddsystem' || 'noideasystem' || 'otherfeature') {
+        //     console.log('Different System or Feature');
+        // } else {
+
+        //     valueArray.push(this.value);
+        // }
+
+    });
+
+    var selecty = document.getElementById('selecty');
+    var selectedzipvalue = selecty.options[selecty.selectedIndex].value;
+
+    if (selectedzipvalue == 'far') {
+        console.log('Far far away');
+    } else {
+
+        valueArray.push(selectedzipvalue);
+    };
+
+    console.log('Values are: ' + valueArray);
+
+    
+};
+
+
+
+
+
+
+
+
+
+
 
 
 // Turns individual fieldsets red and displays error message if unchecked
 
 const errorCheck = () => {
+
+    var errorCount = 0;
+
     $(".check").each(function () {
         if ($(this).find('input:checked').length == 0) {
             this.style.color = 'red';
             document.getElementById("requiredError").style.display = "block";
+            ++errorCount;
             scrollTo(0, 0);
         }
     });
@@ -25,8 +92,15 @@ const errorCheck = () => {
     if (selectlist.options[selectlist.selectedIndex].value == "none") {
         document.getElementById('zipSelectLabel').style.color = 'red';
         document.getElementById("requiredError").style.display = "block";
+        ++errorCount
         scrollTo(0, 0);
     };
+
+    if (errorCount == 0) {
+        mathTime();
+    } else {
+        console.log('Yikes');
+    }
 };
 
 
@@ -63,7 +137,6 @@ const checkZip = () => {
     }
 }
 
-
 const removesError = () => {
     $("fieldset").click(function () {
         var count = 0;
@@ -74,11 +147,8 @@ const removesError = () => {
         });
 
         if (count == 0) {
-            console.log('inputs are good!');
             checkZip();
-        } else {
-            console.log("something's missing");
-        };
+        }
     });
 };
 

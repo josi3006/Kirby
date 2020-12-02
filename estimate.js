@@ -82,11 +82,10 @@ const mathTime = () => {
     var allInclusiveService = arrayTotal + 25;
 
     var estimateData = `
+    <hr><br><br>
     <p>Basic service: $${arrayTotal} per visit.</p>
     <p>Premium service: $${premiumService} per visit.</p>
-    <p>All-inclusive service: $${allInclusiveService} per visit.</p>
-
-    
+    <p>All-inclusive service: $${allInclusiveService} per visit.</p>    
     `;
 
 

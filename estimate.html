@@ -6,7 +6,7 @@
     <link rel="icon" href="images/KAicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -66,7 +66,23 @@
                     <div class="card-body">
                         <h4 class="card-title">REAL-TIME POOl SERVICE ESTIMATE</h4>
 
-                        <div id="requiredError">All information is required. Please fix errors below, then resubmit.</div>
+                        <div id="estimateblock">
+
+                            <div id="allwarning">This is not an accurate estimate, due to the following answers:</div>
+                            <div id="farzipwarning"><small> Your zip code is not in our typical operating range.</small></div>
+                            <div id="nosizewarning"><small> You did not give a pool size.</small></div>
+                            <div id="oddsystemwarning"><small> You indicated you have an odd filter/sanitizing system.</small></div>
+                            <div id="nosystemwarning"><small> You did not choose a system type.</small></div>
+                            <div id="otherfeaturewarning"><small> You indicated you have an odd feature or circumstance.</small></div>
+
+                            <div id="moneyblock"></div>
+                        </div>
+
+                        
+
+
+                        <div id="requiredError">All information is required. Please fix errors below, then resubmit.
+                        </div>
 
 
                         <!-- Required checkbox to acknowledge estimate is not binding -->
@@ -126,7 +142,7 @@
 
                             <p>Please choose the size of your pool(s):</p>
 
-                           
+
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="poolSizeRadios" id="10to20k"
@@ -182,24 +198,18 @@
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="frequencyRadios" id="frequencyTwice"
-                                    value="twiceperweek">
+                                    value="-10">
                                 <label class="form-check-label" for="frequencyTwice">
                                     Twice per week</label>
                             </div>
 
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios" id="20"
-                                    value="frequencyBiweekly">
+                                <input class="form-check-input" type="radio" name="frequencyRadios" id="20" value="40">
                                 <label class="form-check-label" for="frequencyBiweekly">
                                     Every two weeks</label>
                             </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="frequencyRadios" id="-10"
-                                    value="allfivedays">
-                                <label class="form-check-label" for="frequencyWeekdays">
-                                    Every weekday</label>
-                            </div>
+                           
                         </fieldset>
                         <hr>
 
@@ -219,7 +229,7 @@
                                 <label class="form-check-label" for="any">
                                     Any available</label>
                             </div>
-                            
+
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="dayRadios" id="friday" value="20">
                                 <label class="form-check-label" for="friday">
@@ -448,7 +458,7 @@
         });
     </script>
 
-<!-- 
+    <!-- 
 
     <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>

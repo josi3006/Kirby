@@ -7,33 +7,45 @@ $(document).ready(function () {
 
 
 const mathTime = () => {
-    console.log("Let's go!");
+
+    document.getElementById('estimateblock').style.display = "block";
+
+    scrollTo(0, 0);
+
     var valueArray = [];
+
     $("input:checked").each(function () {
+
+
 
         switch (this.value) {
 
             case 'noideasize':
-                console.log('No idea pool size');
+                document.getElementById('nosizewarning').style.display = "block";
+                document.getElementById('allwarning').style.display = "block";
                 break;
 
             case 'oddsystem':
-                console.log('I have an odd system');
+                document.getElementById('oddsystemwarning').style.display = "block";
+                document.getElementById('allwarning').style.display = "block";
                 break;
 
             case 'noideasystem':
-                console.log('No Idea what system i have');
+                document.getElementById('nosystemwarning').style.display = "block";
+                document.getElementById('allwarning').style.display = "block";
                 break;
 
             case 'otherfeature':
-                console.log('i have some other feature');
+                document.getElementById('otherfeaturewarning').style.display = "block";
+                document.getElementById('allwarning').style.display = "block";
                 break;
 
             default:
-                valueArray.push(this.value);
-
-
+                var asNumber = parseInt(this.value);
+                valueArray.push(asNumber);
         }
+
+
 
         // if (this.value == 'far') {
         //     console.log('Far zip code');
@@ -52,15 +64,36 @@ const mathTime = () => {
     var selectedzipvalue = selecty.options[selecty.selectedIndex].value;
 
     if (selectedzipvalue == 'far') {
-        console.log('Far far away');
+        document.getElementById('farzipwarning').style.display = "block";
+        document.getElementById('allwarning').style.display = "block";
+
     } else {
 
-        valueArray.push(selectedzipvalue);
+        var zipValueAsNumber = parseInt(selectedzipvalue);
+        valueArray.push(zipValueAsNumber);
     };
 
     console.log('Values are: ' + valueArray);
 
+    var arrayTotal = valueArray.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+    var premiumService = arrayTotal + 15;
+    var allInclusiveService = arrayTotal + 25;
+
+    var estimateData = `
+    <p>Basic service: $${arrayTotal} per visit.</p>
+    <p>Premium service: $${premiumService} per visit.</p>
+    <p>All-inclusive service: $${allInclusiveService} per visit.</p>
+
     
+    `;
+
+
+
+    document.getElementById('moneyblock').innerHTML = estimateData;
+
+
 };
 
 

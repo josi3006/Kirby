@@ -354,6 +354,51 @@ a:active {
 }
 
 
+#estimateblock {
+  display: none;
+  border-style: solid;
+    border-color: #006989;
+    border-radius: 10px;
+    min-height: 20px;
+    padding: 20px;
+}
+
+#allwarning {
+  display: none;
+}
+
+#farzipwarning {
+  display: none;
+  font-weight: 50%;
+}
+
+#nosizewarning {
+  display: none;
+  font-weight: 50%;
+
+}
+
+#oddsystemwarning {
+  display: none;
+  font-weight: 50%;
+
+}
+
+#nosystemwarning {
+  display: none;
+  font-weight: 50%;
+
+}
+
+#otherfeaturewarning {
+  display: none;
+  font-weight: 50%;
+
+}
+
+                      
+
+
 
 
 

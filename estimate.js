@@ -84,9 +84,10 @@ const mathTime = () => {
     var estimateData = `
     <br><br>
     <h3>Your estimate:</h3>
-    <h4>Basic service: $${arrayTotal} per visit.</h3>
-    <h4>Premium service: $${premiumService} per visit.</h3>
-    <h4>All-inclusive service: $${allInclusiveService} per visit.</h3><br>
+    <ul>
+    <li><h5>Basic service: $${arrayTotal} per visit.</h5></li>
+    <li><h5>Premium service: $${premiumService} per visit.</h5></li>
+    <li><h5>All-inclusive service: $${allInclusiveService} per visit.</h5></li><br>
     <a href="service.html">Click here to learn about these service options</a><br>
     <a href="#" onclick="window.location.reload(true);">Click here to reset the form</a><br>
     `;

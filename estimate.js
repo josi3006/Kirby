@@ -78,8 +78,8 @@ const mathTime = () => {
     var arrayTotal = valueArray.reduce(function (a, b) {
         return a + b;
     }, 0);
-    var premiumService = arrayTotal + 15;
-    var allInclusiveService = arrayTotal + 25;
+    var premiumService = arrayTotal + 20;
+    var allInclusiveService = arrayTotal + 35;
 
     var estimateData = `
     <br><hr><br><br>

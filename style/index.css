@@ -36,12 +36,11 @@ body, html {
 
 
 .pinkbox {
-    background-color: #c9598d;
-    justify-content: center; 
+  background-color: rgba(150, 100, 150, 0.7);
+  justify-content: center; 
     /* display: flex; */
-    align-items: center;
-
-    width: 100%;
+  align-items: center;
+  width: 100%;
 
 }
 
@@ -55,7 +54,7 @@ body, html {
 
 
 .bluebox {
-    background-color: rgba(0, 105, 137, 0.9);
+    background-color: rgba(0, 105, 137, 0.5);
     justify-content: center; 
     /* display: flex; */
     align-items: center;
@@ -393,10 +392,35 @@ a:active {
 #otherfeaturewarning {
   display: none;
   font-weight: 50%;
-
 }
 
-                      
+.kabutton {
+background-color: #006989;
+color: #cbeef3;
+width: 120px;
+height: 40px;
+line-height: 40px;
+border-radius: 6px;
+border-style: solid;
+border-color: #006989;
+border-width: 1px;
+cursor: pointer;
+}
+
+.kabutton:hover {
+background-color: #cbeef3;
+color: #006989;
+width: 120px;
+height: 40px;
+line-height: 40px;
+border-radius: 6px;
+border-style: solid;
+border-color: #006989;
+border-width: 1px;
+cursor: pointer;
+}
+
+
 
 
 

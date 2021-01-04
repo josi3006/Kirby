@@ -4,7 +4,6 @@
     // Assigning data from the $_POST array to variables
     $name = $_POST['sender_name'];
     $mail_from = $_POST['sender_email'];
-    $phone = $_POST['sender_phone'];
     $message = $_POST['sender_message'];
 
     // Construct email subject
@@ -13,7 +12,6 @@
     // Construct email body
     $body_message = 'From: ' . $name . "\r\n";
     $body_message .= 'E-mail: ' . $mail_from . "\r\n";
-    $body_message .= 'Phone: ' . $phone . "\r\n";
     $body_message .= 'Message: ' . $message;
 
     // Construct email headers

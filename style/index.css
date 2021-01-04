@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     font-family: 'Ubuntu', 'Arial', serif;
     color: #006989;
+    max-width: 100%;
 }
 
 
@@ -38,16 +39,19 @@ body, html {
 .pinkbox {
   background-color: rgba(150, 100, 150, 0.7);
   justify-content: center; 
-    /* display: flex; */
   align-items: center;
   width: 100%;
   font-family: 'Ubuntu', 'Arial', serif;
+  max-width: 100%;
+
 
 
 }
 
 .row {
     width: 100%;
+    max-width: 100%;
+
 
 
 }
@@ -58,12 +62,15 @@ body, html {
 .bluebox {
     background-color: rgb(0, 105, 137);
     justify-content: center; 
-    /* display: flex; */
     align-items: center;
     width: 100%;
+    max-width: 100%;
+
 }
     
 .bgpic1, .bgpic2, .bgpic3 {
+  max-width: 100%;
+
     position: relative;
     /* opacity: 0.65; */
     background-attachment: fixed;
@@ -228,13 +235,13 @@ form {
 }
 
 label {
-    font-size: 100%;
+  font-family: inherit;
+  font-size: 80%;
 }
 
 .form-control {
   /* background-color: #cbeef3; */
   background-color: rgba(255, 255, 255, 0.9);
-
   font-size: 80%;
   width: 60%;
 }
@@ -423,6 +430,33 @@ cursor: pointer;
 }
 
 
+
+.kabuttonneg {
+  background-color: #cbeef3;
+  color: #006989;  
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: #cbeef3;
+  border-width: 1px;
+  cursor: pointer;
+  }
+
+
+  .kabuttonneg:hover {
+    background-color: #006989;
+    color: #cbeef3;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #cbeef3;
+    border-width: 1px;
+    cursor: pointer;
+    }
 
 
 

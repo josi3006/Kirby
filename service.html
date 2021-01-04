@@ -35,8 +35,6 @@
         </div>
 
 
-
-
         <div class="row mx-0">
 
             <div class="col px-0">
@@ -198,39 +196,25 @@
             <div class="col-sm bluebox pl-5 pb-5">
 
 
-                <!-- BEGIN CONTACT FORM -->
-
-
-                <form name="gform" id="gform" enctype="text/plain"
-                    action="https://docs.google.com/forms/d/e/1FAIpQLSfP0zBPlNDI9Td2pFWWswsnZemxxXrvnPbI9PoEDMgabTZO3Q/formResponse?"
-                    target="./landing.html" onsubmit="submitted=true;">
-
-
-                    <div class="form-group">
-                        <label for="entry.43774561">Name:</label>
-                        <input type="text" class="form-control" name="entry.43774561" id="entry.43774561"
-                            placeholder="Enter Name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="entry.1660289428">Email:</label>
-                        <input type="text" class="form-control" name="entry.1660289428" id="entry.1660289428"
-                            placeholder="Enter Email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="entry.1930685727">Message:</label>
-                        <input type="text" class="form-control form-control-msg" name="entry.1930685727"
-                            id="entry.1930685727" placeholder="Enter Your Message">
-                    </div>
-
-                    <input type="submit" value="Submit">
-
-                </form>
-
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                    onload="if(submitted) {}"></iframe>
-
+                <form action="send-mail.php" method="POST">
+                    <label for="field_name">Name:</label>
+                    <input type="text" id="field_name" name="sender_name">
+                    <br /><br />
+          
+                    <label for="field_email">Your e-mail:</label>
+                    <input type="text" id="field_email" name="sender_email">
+                    <br /><br />
+          
+                    <label for="field_phone">Phone:</label>
+                    <input type="text" id="field_phone" name="sender_phone">
+                    <br /><br />
+          
+                    <label for="field_message">Message:</label>
+                    <textarea id="field_message" name="sender_message"></textarea>
+                    <br /><br />
+          
+                    <input type="submit" name="send_message" value="Send">
+                  </form>
             </div>
 
 
@@ -248,22 +232,6 @@
         </div>
     </div>
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-
-    <script type="text/javascript">var submitted = false;</script>
-    <script type="text/javascript">
-        $('#gform').on('submit', function (e) {
-
-
-            console.log('Sent??');
-            e.target.reset();
-
-        });
-    </script>
 
 
 

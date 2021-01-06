@@ -54,7 +54,7 @@
 
 
 
-    <nav class="navbar navbar-expand-sm sticky-top bluebox">
+    <nav class="navbar navbar-expand-sm sticky-top bluebox justify-content-center">
 
       <!-- Links -->
       <ul class="navbar-nav">
@@ -78,18 +78,7 @@
         </li>        
       </ul>
 
-
-      <form class="form-inline" action="/action_page.php">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Customer Login:</span>
-          </div>
-          <input type="text" class="form-control" placeholder="Username">
-        </div>
-      </form>
-
-
-    
+   
     </nav>
 
     <!-- SERVICES SECTION -->
@@ -185,9 +174,8 @@
           <br />
 
           <label for="field_message">Your Message:</label><br />
-          <textarea id="field_message" name="sender_message" placeholder="Message" class="formbox"></textarea>
-          <br /><br />
-
+          <textarea id="field_message" name="sender_message" placeholder="Message" class="formbox mb-3"></textarea><br />
+       
           <input class="kabuttonneg" type="submit" name="send_message" value="Send">
 
         </form>
@@ -204,9 +192,21 @@
         <a href="service.html" class="a-light-small">POOL SERVICE</a><br>
         <a href="consulting.html" class="a-light-small">CONSULTING</a><br>
         <a href="lessons.html" class="a-light-small">SWIM LESSONS</a><br>
-        <a href="login.html" class="a-light-small">CUSTOMER LOGIN</a><br>
+        <a href="login.html" class="a-light-small">CUSTOMER LOGIN</a><br><br>
+
+        <h3>Customer Login:</h3>
+
+      <form class="form" action="">
+        <div class="input-group mx-auto">
+          <input type="text" placeholder="Username" class="mx-auto mb-3">
+        </div>
+        <button class="kabuttonneg ml-1" onclick="fakeButton()">Go</button>
+
+      </form>
+
 
       </div>
+
 
       <div class="col bluebox text-center mx-0 p-4">
 
@@ -228,7 +228,11 @@
 
 
 
-
+<script>
+  fakeButton = () => {
+    alert('Please enter a valid username!')
+  }
+</script>
 
 
 

@@ -147,6 +147,13 @@ body, html {
 
 
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
+
+
 
 #introblock {
     color: #cbeef3;
@@ -218,7 +225,16 @@ li.answer {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #cbeef3;
-  font-size: 150%;
+  font-size: 2.5vw;
+}
+
+.headtext:hover {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ba43ff;
+  font-size: 2.5vw;
+  cursor: pointer;
 }
 
 

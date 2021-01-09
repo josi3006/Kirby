@@ -97,79 +97,88 @@
 
 
 
-
-        <div class="row mx-0">
-
-            <div class="col-sm bluebox pl-5 pb-5">
+<!-- Start of footer -->
 
 
+<div class="row mx-0 px-0">
 
-                <!-- BEGIN CONTACT FORM -->
+    <div class="col bluebox text-center mx-0 p-4">
 
+      <h3>Contact Kirby:</h3>
 
-                <form name="gform" id="gform" enctype="text/plain"
-                    action="https://docs.google.com/forms/d/e/1FAIpQLSfP0zBPlNDI9Td2pFWWswsnZemxxXrvnPbI9PoEDMgabTZO3Q/formResponse?"
-                    target="./landing.html" onsubmit="submitted=true;">
+      <form action="send-mail.php" method="POST">
+        <label for="field_name">Your Name:</label><br />
+        <input type="text" id="field_name" name="sender_name" placeholder="Name" class="formbox">
+        <br />
 
+        <label for="field_email">Your e-mail:</label><br />
+        <input type="text" id="field_email" name="sender_email" placeholder="Email" class="formbox">
+        <br />
 
-                    <div class="form-group">
-                        <label for="entry.43774561">Name:</label>
-                        <input type="text" class="form-control" name="entry.43774561" id="entry.43774561"
-                            placeholder="Enter Name">
-                    </div>
+        <label for="field_message">Your Message:</label><br />
+        <textarea id="field_message" name="sender_message" placeholder="Message"
+          class="formbox mb-3"></textarea><br />
 
-                    <div class="form-group">
-                        <label for="entry.1660289428">Email:</label>
-                        <input type="text" class="form-control" name="entry.1660289428" id="entry.1660289428"
-                            placeholder="Enter Email">
-                    </div>
+        <input class="kabuttonneg" type="submit" name="send_message" value="Send">
 
-                    <div class="form-group">
-                        <label for="entry.1930685727">Message:</label>
-                        <input type="text" class="form-control form-control-msg" name="entry.1930685727"
-                            id="entry.1930685727" placeholder="Enter Your Message">
-                    </div>
+      </form>
 
-                    <input type="submit" value="Submit">
+    </div>
 
-                </form>
+    <div class="col bluebox mx-0 p-4 text-center">
 
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                    onload="if(submitted) {}"></iframe>
+      <h3>Quick Links:</h3>
 
-            </div>
+      <a href="index.html" class="a-light-small">HOME</a><br>
+      <a href="about.html" class="a-light-small">ALL ABOUT KIRBY</a><br>
+      <a href="training.html" class="a-light-small">LIFEGUARD TRAINING</a><br>
+      <a href="service.html" class="a-light-small">POOL SERVICE</a><br>
+      <a href="consulting.html" class="a-light-small">CONSULTING</a><br>
+      <a href="lessons.html" class="a-light-small">SWIM LESSONS</a><br>
+      <a href="login.html" class="a-light-small">CUSTOMER LOGIN</a><br><br>
 
+      <h3>Customer Login:</h3>
 
-
-
-
-
-
-
-
-            <div class="col-sm pinkbox pl-5 text-right">
-                you're awesome
-            </div>
-
+      <form class="form" action="">
+        <div class="input-group mx-auto">
+          <input type="text" placeholder="Username" class="mx-auto mb-3">
         </div>
+        <button class="kabuttonneg ml-1" onclick="fakeButton()">Go</button>
+
+      </form>
+
+
     </div>
 
 
+    <div class="col bluebox text-center mx-0 p-4">
+
+      <h3>Our Info:</h3>
+
+      <p>1234 Main Street<br>
+        Richmond, VA 23221</p>
+      <p>555-123-4567</p>
+
+      <p
+        style="border-color: #ff2525; border-style: solid; border-width: 1px; border-radius: 2px; padding: 6px; font-size: 80%;">
+        COVID-19 Info:<br> Our Pool Service and Consulting services are provided using the highest safety standards to protect our customers and team members. Due to the pandemic, our Swim Lessons and Lifeguard Training Courses are suspended until further notice.
+          Please contact us for details.</p>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    </div>
 
-    <script type="text/javascript">var submitted = false;</script>
-    <script type="text/javascript">
-        $('#gform').on('submit', function (e) {
+  </div> <!-- End of footer -->
 
 
-            console.log('Sent??');
-            e.target.reset();
+</div>
 
-        });
-    </script>
+
+
+<script>
+  fakeButton = () => {
+    alert('Please enter a valid username!')
+  }
+</script>
 
 
 

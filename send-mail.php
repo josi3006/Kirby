@@ -26,11 +26,11 @@
     if ($mail_sent == true){ ?>
         <script language="javascript" type="text/javascript">
         alert('Thank you for the message. We will contact you shortly.');
-        window.location = 'landing.html';
+        window.location = 'index.html';
         </script>
     <?php } else { ?>
     <script language="javascript" type="text/javascript">
-        alert('Message not sent, mfr. Please notify the site administrator admin@admin.com');
+        alert('Message not sent. Please notify the site administrator info@kirbyaquatics.com');
         window.location = 'classes.html';
     </script>
     <?php

@@ -27,11 +27,12 @@
         <script language="javascript" type="text/javascript">
         alert('Thank you for the message. We will contact you shortly.');
         window.location = window.history.back();
+        location.reload();
         </script>
     <?php } else { ?>
     <script language="javascript" type="text/javascript">
         alert('Message not sent. Please notify the site administrator info@kirbyaquatics.com');
-        window.location = 'classes.html';
+        window.location = 'index.html';
     </script>
     <?php
     }

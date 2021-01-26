@@ -25,6 +25,8 @@
 
     if ($mail_sent == true){ ?>
         <script language="javascript" type="text/javascript">
+        window.location = window.history.back();
+        location.reload();
         alert('Thank you for the message. We will contact you shortly.');
         window.location = window.history.back();
         location.reload();

@@ -175,7 +175,7 @@
 
         <h3>Contact Kirby:</h3>
 
-        <form action="send-mail.php" method="POST">
+        <form action="send-mail.php" method="POST" id="mailform">
           <label for="field_name">Your Name:</label><br />
           <input type="text" id="field_name" name="sender_name" placeholder="Name" class="formbox">
           <br />
@@ -188,7 +188,7 @@
           <textarea id="field_message" name="sender_message" placeholder="Message"
             class="formbox mb-3"></textarea><br />
 
-          <input class="kabuttonneg" type="submit" name="send_message" value="Send">
+          <input class="kabuttonneg" type="submit" name="send_message" value="Send" onclick="formreset()">
 
         </form>
 
@@ -204,7 +204,6 @@
         <a href="service.html" class="a-light-small">POOL SERVICE</a><br>
         <a href="consulting.html" class="a-light-small">CONSULTING</a><br>
         <a href="lessons.html" class="a-light-small">SWIM LESSONS</a><br>
-        <a href="login.html" class="a-light-small">CUSTOMER LOGIN</a><br><br>
 
         <h3>Customer Login:</h3>
 
@@ -258,6 +257,13 @@
       alert('Please enter a valid username!')
     }
   </script>
+
+  <script>
+    formreset = () => {
+      document.getElementById("mailform").reset();
+    }
+  </script>
+
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>

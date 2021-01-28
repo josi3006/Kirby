@@ -375,7 +375,7 @@ a {
   margin: 0; /* Remove margins */
   cursor: pointer;
   text-decoration: none;
-
+color: #006989;
 
 }
 
@@ -422,6 +422,8 @@ a {
 a:hover {
  font-style: italic;
  text-decoration: none;
+ color: #ba43ff;
+
 }
 
 nav li {

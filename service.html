@@ -102,6 +102,12 @@
                             Kirby Aquatics once you're on board. We take care of your pool the right way, on time.</p>
                         <br>
 
+                        <p class="text-center">
+                        <a href="estimate.html">Click here to get a real-time, no-hassle fee estimate for pool service!</a>
+</p>
+
+                        <br><br>
+
                         <div class="container-fluid">
                             <div class="row align-items-start mx-0">
                                 <div class="col">
@@ -210,6 +216,11 @@
                                         We'll come out to see your pool, answer any questions you have, and get you
                                         signed up if you're ready. The visit will be informational only, with no
                                         pressure at all...no sales pitch, we promise!</p>
+
+                                        <p class="text-center">
+                                            <a href="estimate.html">Or click here to get a real-time, no-hassle fee estimate for pool service!</a>
+                    </p>
+
                                 </div>
                             </div>
 
@@ -248,7 +259,7 @@
                     <textarea id="field_message" name="sender_message" placeholder="Message"
                         class="formbox mb-3"></textarea><br />
 
-                    <input class="kabuttonneg" type="submit" name="send_message" value="Send">
+                        <input class="kabuttonneg" type="submit" name="send_message" value="Send" onclick="formreset()">
 
                 </form>
 
@@ -264,7 +275,6 @@
                 <a href="service.html" class="a-light-small">POOL SERVICE</a><br>
                 <a href="consulting.html" class="a-light-small">CONSULTING</a><br>
                 <a href="lessons.html" class="a-light-small">SWIM LESSONS</a><br>
-                <a href="login.html" class="a-light-small">CUSTOMER LOGIN</a><br><br>
 
                 <h3>Customer Login:</h3>
 
@@ -320,7 +330,11 @@
     </script>
 
 
-
+<script>
+    formreset = () => {
+      document.getElementById("mailform").reset();
+    }
+  </script>
 
 
 

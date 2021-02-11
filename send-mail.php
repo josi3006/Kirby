@@ -1,5 +1,5 @@
 <?php
-    $mail_to = 'josi3006@hotmail.com'; // specify your email here
+    $mail_to = 'info@KirbyAquatics.com'; // specify your email here
 
     // Assigning data from the $_POST array to variables
     $name = $_POST['sender_name'];

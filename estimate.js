@@ -17,7 +17,6 @@ const mathTime = () => {
     $("input:checked").each(function () {
 
 
-
         switch (this.value) {
 
             case 'noideasize':
@@ -44,19 +43,6 @@ const mathTime = () => {
                 var asNumber = parseInt(this.value);
                 valueArray.push(asNumber);
         }
-
-
-
-        // if (this.value == 'far') {
-        //     console.log('Far zip code');
-        // } else if (this.value == 'noideasize') {
-        //     console.log('No Idea Pool Size');
-        // } else if (this.value == 'oddsystem' || 'noideasystem' || 'otherfeature') {
-        //     console.log('Different System or Feature');
-        // } else {
-
-        //     valueArray.push(this.value);
-        // }
 
     });
 
@@ -185,20 +171,6 @@ const removesError = () => {
         }
     });
 };
-
-
-
-
-// $(".check").bind('submit', function () {
-//     $(this).prop('checked', false);
-// });
-
-
-// $("select, input").bind('click', function () {
-//     console.log(this.value + ' is the value clicked')
-// });
-
-
 
 
 

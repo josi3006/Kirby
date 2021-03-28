@@ -11,14 +11,11 @@ body, html {
   position: relative;
   z-index: -1;
     height: 100vh;
-    /* background-color: rgba(0, 105, 137, 0.1); */
     background-color: #eaf1f1;
-
     justify-content: center; 
     display: flex;
     align-items: center;
     width: 100%;
-    /* margin: 0 auto; */
 }
 
 
@@ -40,8 +37,6 @@ body, html {
   animation-timing-function: ease-in;
   animation-delay: -1s;
   animation-iteration-count: infinite;
-
-
 }
 
 
@@ -52,22 +47,24 @@ body, html {
 
 .smallbox {
   min-height: 50px;
-  background-color: #006989;
+  /* background-color: #006989; */
+  background-color:#ffffff;
+
   justify-content: center; 
   display: flex;
   align-items: center;
   width: 100%;
-  /* margin: 0 auto; */
-}
+  margin: 0 auto;
+} 
 
 
-
+/* 
 .red {
   background-color: #f50707;
   min-height: 20px;
-}
+} */
 
-
+/* 
 .pinkbox {
   background-color: rgba(150, 100, 150, 0.7);
   justify-content: center; 
@@ -78,7 +75,7 @@ body, html {
 
 
 
-}
+} */
 
 .row {
     width: 100%;
@@ -92,16 +89,80 @@ body, html {
 
 
 .bluebox {
-    background-color: #006989;
-    color: #cbeef3;
+    /* background-color: #006989; */
+    background-color: rgb(75,204,255);
+    color: #000000;
     justify-content: center; 
     align-items: center;
     width: 100%;
     max-width: 100%;
 
 }
-    
+
+.servicebox {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.serviceblock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(75,204,255);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.serviceimage {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+
+.navbox {
+  /* background-color: #006989; */
+  background-color:#ffffff;
+  border-top: .1em solid rgb(75,204,255);
+  border-bottom: .1em solid rgb(75,204,255);
+  color: #000000;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+
+/*     
 .bgpic1, .bgpic2, .bgpic3 {
+  max-width: 100%;
+
+    position: relative;
+    /* opacity: 0.65; */
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+} */
+
+
+   
+.bgpic2 {
   max-width: 100%;
 
     position: relative;
@@ -116,7 +177,6 @@ body, html {
     align-items: center;
     justify-content: center; 
 }
-
 
 .bgpic1::before {
     content: "";
@@ -136,11 +196,11 @@ body, html {
       background-image: url('../images/poolsplash.jpg');
       min-height: 100%;
 }
-  
+/*   
 .bgpic3 {
       background-image: url('../images/clayhit.jpg');
       min-height: 50%;
-}
+} */
 
 
 /* start */
@@ -157,13 +217,12 @@ body, html {
 
 
 #introblock {
-    color: #cbeef3;
-    background-color: #006989;
+    background-color: rgb(75,204,255);
     text-align: center;
     letter-spacing: 2px;
-    padding: 30px 60px;
-    font-size: 150%;
-    border-bottom: 1px solid #cbeef3;
+    /* padding: 30px 60px; */
+    /* font-size: 150%; */
+    /* border-bottom: 1px solid #cbeef3; */
   
     /* text-align: justify; */
 }
@@ -180,10 +239,10 @@ body, html {
 
   /* text-align: justify; */
 }
-
+/* 
 .serviceblock {
   width: 80%;
-}
+} */
 
 .navblock {
   width: 20%;
@@ -225,16 +284,16 @@ li.answer {
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #cbeef3;
-  font-size: 2.5vw;
+  color: #000000;
+  font-size: 1.5vw;
 }
 
 .headtext:hover {
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #ba43ff;
-  font-size: 2.5vw;
+  color: #ffffff;
+  font-size: 1.5vw;
   cursor: pointer;
 }
 
@@ -248,7 +307,8 @@ li.answer {
   padding: 20px;
   text-align: center;
   border-radius: 16px;
-  border-color: #006989;
+  /* border-color: #006989; */
+  border-color: #000000;
   border-style: solid;
 }
 
@@ -353,7 +413,7 @@ label {
   padding: 10px;
 }
 
-
+/* 
 #serviceboxes {
     background-color: #000000;
 }
@@ -366,7 +426,7 @@ label {
 
 }
 
-
+ */
 
 
 a {
@@ -375,7 +435,8 @@ a {
   margin: 0; /* Remove margins */
   cursor: pointer;
   text-decoration: none;
-color: #006989;
+/* color: #006989; */
+color: rgb(75,204,255);
 
 }
 
@@ -386,7 +447,7 @@ color: #006989;
   font-size:calc(8px + 1.25vw);
 
   /* font-size: 1.25vw; */
-  color: #cbeef3 !important;
+  color: rgb(75,204,255);
 }
 
 .a-light-small {
@@ -420,9 +481,10 @@ color: #006989;
 }
 
 a:hover {
- font-style: italic;
+ /* font-style: italic; */
  text-decoration: none;
- color: #ba43ff;
+ background-color: rgb(75,204,255);
+ color: #000000;
 
 }
 
@@ -430,6 +492,7 @@ nav li {
   display: inline-block;
   border-right: 1px solid #ccc;
   padding: 0 1vw;
+  margin: 0;
 }
   
 nav li:last-child { border: 0; } /* removes pipe from the last horizontal link */

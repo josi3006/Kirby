@@ -86,8 +86,6 @@ body, html {
 }
 
 
-
-
 .bluebox {
     /* background-color: #006989; */
     background-color: rgb(75,204,255);
@@ -96,15 +94,16 @@ body, html {
     align-items: center;
     width: 100%;
     max-width: 100%;
-
 }
 
+/* 
 .servicebox {
   position: relative;
   margin: 0;
   padding: 0;
-}
+} */
 
+/* 
 .serviceblock {
   position: absolute;
   left: 0;
@@ -115,8 +114,8 @@ body, html {
   margin: 0;
   padding: 0;
   z-index: 1;
-}
-
+} */
+/* 
 .serviceimage {
   position: absolute;
   right: 0;
@@ -126,6 +125,12 @@ body, html {
   margin: 0;
   padding: 0;
   z-index: 2;
+} */
+
+
+.offeringimg {
+  min-width: 20vw;
+  height: auto;
 }
 
 

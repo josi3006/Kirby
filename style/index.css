@@ -575,29 +575,31 @@ nav li:last-child { border: 0; } /* removes pipe from the last horizontal link *
 }
 
 .kabutton {
-background-color: #006989;
-color: #cbeef3;
+background-color: rgb(75,204,255);
+color: #000000;
 width: 120px;
 height: 40px;
 line-height: 40px;
 border-radius: 6px;
 border-style: solid;
-border-color: #006989;
+border-color: #000000;
 border-width: 1px;
 cursor: pointer;
+text-align: center;
 }
 
 .kabutton:hover {
-background-color: #cbeef3;
-color: #006989;
+background-color: #000000;
+color: rgb(75,204,255);
 width: 120px;
 height: 40px;
 line-height: 40px;
 border-radius: 6px;
 border-style: solid;
-border-color: #006989;
+border-color: rgb(75,204,255);
 border-width: 1px;
 cursor: pointer;
+text-align: center;
 }
 
 

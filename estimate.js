@@ -69,6 +69,7 @@ const mathTime = () => {
 
     var estimateData = `
     <br><br>
+    <p>Note this is only an estimate.  Actual rates may vary depending on real-world factors.</p><br>
     <h3>Your estimate:</h3>
     <ul>
     <li><h5>Basic service: $${arrayTotal} per visit.</h5></li>

@@ -187,7 +187,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    height: 100%;
+    /* height: 100%; */
     min-width: 100%;
     display: flex;
     align-items: center;
@@ -210,7 +210,7 @@ body {
   
 .bgpic2 {
       background-image: url('../images/poolsplash.jpg');
-      min-height: 100%;
+      /* min-height: 100%; */
 }
 /*   
 .bgpic3 {
@@ -332,8 +332,8 @@ li.answer {
   /* margin: 20px; */
   background-color: rgba(255, 255, 255, 0.9);
   color: #006989;
-  /* min-width: 200px; */
-  min-height: 500px;
+  min-width: 20em;
+  /* min-height: 500px; */
   /* width: 100%; */
   padding: 20px;
   text-align: center;
@@ -471,9 +471,10 @@ color: rgb(75,204,255);
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
   font-size:calc(8px + 1vw);
+  color: rgb(75,204,255);
 
   /* font-size: 1vw; */
-  color: #cbeef3 !important;
+  /* color: #cbeef3 !important; */
 }
 
 .a-dark-big {

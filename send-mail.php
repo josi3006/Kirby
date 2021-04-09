@@ -7,7 +7,7 @@
 
     $subject = 'K I R B Y contact from ' . $name;
 
-    $body_message = 'From: ' . $name . "\r\n";
+    $body_message = 'Fromp: ' . $name . "\r\n";
     $body_message .= 'E-mail: ' . $mail_from . "\r\n";
     $body_message .= 'Message: ' . $message;
 

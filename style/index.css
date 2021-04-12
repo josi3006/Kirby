@@ -1,4 +1,4 @@
-html {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -7,26 +7,16 @@ html {
   max-width: 100vw;
 }
 
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Ubuntu', 'Arial', serif;
-    color: #006989;
-    max-width: 100vw;
-}
-
-
 
 .box {
   position: relative;
   z-index: -1;
-    height: 100vh;
-    background-color: #ffffff;
-    justify-content: center; 
-    display: flex;
-    align-items: center;
-    width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  justify-content: center; 
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 
@@ -53,9 +43,7 @@ body {
 
 .smallbox {
   min-height: 50px;
-  /* background-color: #006989; */
   background-color:#ffffff;
-
   justify-content: center; 
   display: flex;
   align-items: center;
@@ -64,34 +52,19 @@ body {
 } 
 
 
-/* QUITTED */
-/* .imagediv {
-  min-width: 30vw;
-} */
 
-
-.row {
-    width: 100%;
-    max-width: 100%;
+#mainicon {
+  position: relative;
+  max-width: 100vw;
 }
 
 
-.bluebox {
-    /* background-color: #006989; */
-    background-color: rgb(75,204,255);
-    color: #000000;
-    justify-content: center; 
-    align-items: center;
-    width: 100%;
-    max-width: 100%;
+.smallicon {
+  position: relative;
+  max-height: 15vh;
+  padding: 10px;
 }
 
-
-
-.offeringimg {
-  min-width: 20vw;
-  height: auto;
-}
 
 
 .navbox {
@@ -107,52 +80,51 @@ body {
 }
 
 
+nav li {
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  padding: 0 1vw;
+  margin: 0;
+}
+  
+nav li:last-child { border: 0; } /* removes pipe from the last horizontal link */
+
+
+
+.row {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.offeringimg {
+  min-width: 20vw;
+  height: auto;
+}
+
    
 .bgpic2 {
   background-image: url('../images/poolsplash.jpg');
   max-width: 100%;
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }
 
 
-/* QUITTED
-.bgpic1::before {
-    content: "";
-    background-image: url('../images/poolsplash.jpg');
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: .3;
-}  */
 
-
-  /* QUITTED */
-/* .bgpic2 {
-      background-image: url('../images/poolsplash.jpg');
-} */
-
-
-/* **************************************************
-
-LOOK INTO THIS
-
-
-**************************************************** */
-
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(75,204,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+@media only screen and (max-device-width: 1024px) {
+  .bgpic2 {
+    background-attachment: scroll;
+  }
 }
+
 
 .custom-toggler.navbar-toggler {
   border-color: rgb(75,204,255);
@@ -166,28 +138,10 @@ LOOK INTO THIS
 
 
 #introblock {
-    background-color: rgb(75,204,255);
-    text-align: center;
-    letter-spacing: 2px;
-   }
-
-
-   /* QUITTED
-.introblocksmall {
-  color: #cbeef3;
-  background-color: #006989;
+  background-color: rgb(75,204,255);
   text-align: center;
   letter-spacing: 2px;
-  padding: 15px 30px;
-  font-size: 80%;
-  border-bottom: 1px solid #cbeef3;
-} */
-
-/* QUITTED
-.navblock {
-  width: 20%;
-} */
-
+   }
 
 
 li.question {
@@ -199,24 +153,6 @@ li.answer {
   list-style-type: none;
 }
 
-/* QUITTED
-.title {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #111;
-} */
-
-/* QUITTED
-.title span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-} */
 
 .headtext {
   text-align: center;
@@ -234,21 +170,6 @@ li.answer {
   font-size: 1.5vw;
   cursor: pointer;
 }
-
-/* QUITTED
-.slidebox {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #006989;
-  min-width: 200px;
-  min-height: 500px;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  border-radius: 16px;
-  border-color: #000000;
-  border-style: solid;
-} */
-
 
 
 .card {
@@ -275,12 +196,24 @@ li.answer {
   border-style: solid;
 }
 
+
+
+.bluebox {
+  background-color: rgb(75,204,255);
+  color: #000000;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+
 .formbox {
   min-width: 16em;
 }
 
 form {
-    color: #cbeef3;
+  color: #cbeef3;
 }
 
 label {
@@ -288,63 +221,6 @@ label {
   font-size: 80%;
 }
 
-/* QUITTED
-.form-control {
-  background-color: rgba(255, 255, 255, 0.9);
-  font-size: 80%;
-  width: 60%;
-} */
-
-
-/* QUITTED
-.form-control-msg {
-    height: 64px;
-} */
-
-
-/* QUITTED
-.contactimg {
-  width: 80px;
-  margin-left: 80px;
-  margin-right: 80px;
-} */
-
-
-@media only screen and (max-device-width: 1024px) {
-  .bgpic1, .bgpic2, .bgpic3 {
-    background-attachment: scroll;
-  }
-}
-
-
-/* QUITTED
-.blu {
-        background-color: blue;
-    } */
-
-/* QUITTED
-#logobanner {
-    background-color: #777;
-    position: relative;
-    min-height: 100%;
-    width:100%;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
-
-#mainicon {
-    position: relative;
-    max-width: 100vw;
-}
-
-
-.smallicon {
-  position: relative;
-  max-height: 15vh;
-  padding: 10px;
-}
 
 
 a {
@@ -353,7 +229,7 @@ a {
   margin: 0;
   cursor: pointer;
   text-decoration: none;
-color: rgb(75,204,255);
+  color: rgb(75,204,255);
 }
 
 .a-light-big {
@@ -372,24 +248,6 @@ color: rgb(75,204,255);
   color: rgb(75,204,255);
 }
 
-/* QUITTED
-.a-dark-big {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-size:calc(8px + 1.25vw);
-  color: #006989 !important;
-} */
-
-
-/* QUITTED
-.a-dark-small {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  font-size:calc(8px + 1vw);
-  color: #006989 !important;
-} */
 
 a:hover {
  text-decoration: none;
@@ -397,22 +255,6 @@ a:hover {
  color: #000000;
 }
 
-
-nav li {
-  display: inline-block;
-  border-right: 1px solid #ccc;
-  padding: 0 1vw;
-  margin: 0;
-}
-  
-nav li:last-child { border: 0; } /* removes pipe from the last horizontal link */
-
-
-/* QUITTED
-.new {
-  display: block !important;
-  color: red;
-} */
 
 #noAcknowledgement {
   display: none;
@@ -428,10 +270,10 @@ nav li:last-child { border: 0; } /* removes pipe from the last horizontal link *
 #estimateblock {
   display: none;
   border-style: solid;
-    border-color: #006989;
-    border-radius: 10px;
-    min-height: 20px;
-    padding: 20px;
+  border-color: #006989;
+  border-radius: 10px;
+  min-height: 20px;
+  padding: 20px;
 }
 
 #allwarning {
@@ -464,64 +306,32 @@ nav li:last-child { border: 0; } /* removes pipe from the last horizontal link *
 }
 
 .kabutton {
-background-color: rgb(75,204,255);
-color: #000000;
-width: 120px;
-height: 40px;
-line-height: 40px;
-border-radius: 6px;
-border-style: solid;
-border-color: #000000;
-border-width: 1px;
-cursor: pointer;
-text-align: center;
-}
-
-.kabutton:hover {
-background-color: #000000;
-color: rgb(75,204,255);
-width: 120px;
-height: 40px;
-line-height: 40px;
-border-radius: 6px;
-border-style: solid;
-border-color: rgb(75,204,255);
-border-width: 1px;
-cursor: pointer;
-text-align: center;
-}
-
-
-/* QUITTED
-.kabuttonneg {
-  background-color: #cbeef3;
-  color: #006989;  
+  background-color: rgb(75,204,255);
+  color: #000000;
   width: 120px;
   height: 40px;
   line-height: 40px;
   border-radius: 6px;
   border-style: solid;
-  border-color: #cbeef3;
+  border-color: #000000;
   border-width: 1px;
   cursor: pointer;
-  } */
+  text-align: center;
+}
 
-
-  /* QUITTED
-  .kabuttonneg:hover {
-    background-color: #006989;
-    color: #cbeef3;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 6px;
-    border-style: solid;
-    border-color: #cbeef3;
-    border-width: 1px;
-    cursor: pointer;
-    } */
-
-
+.kabutton:hover {
+  background-color: #000000;
+  color: rgb(75,204,255);
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: rgb(75,204,255);
+  border-width: 1px;
+  cursor: pointer;
+  text-align: center;
+}
 
 
 
